@@ -3,9 +3,10 @@ import { Link } from "react-scroll";
 
 const HeaderWarpper = styled.header`
   position: sticky;
-  top: 1rem;
+  top: 0;
+  padding: 1rem;
   text-align: center;
-  color: #282c34;
+  color: #485276;
 
   @keyframes dropHeader {
     0% {
@@ -34,8 +35,8 @@ const MenuItem = styled.li`
   transition: all 0.3s ease-in-out;
   &:hover {
     scale: 1.07;
-    background-color: #282c34;
-    border-radius: 10rem;
+    background-color: #485276;
+    border-radius: 3rem;
     color: white;
   }
   a {
@@ -43,6 +44,12 @@ const MenuItem = styled.li`
     padding: 1rem;
     text-decoration: none;
     color: inherit;
+    &.active {
+      transition: all 0.3s ease-in-out;
+      background-color: #485276;
+      border-radius: 10rem;
+      color: white;
+    }
   }
 `;
 
@@ -55,29 +62,45 @@ const Header: React.FC = () => {
             to="aboutme" // 해당 컴포넌트의 id와 동일한 이름을 사용
             spy={true}
             smooth={true}
-            offset={-70} // 스크롤 위치를 조절할 수 있습니다.
+            offset={-85} // 스크롤 위치를 조절할 수 있습니다.
             duration={500}
+            activeClass="active"
           >
             About Me
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to="skills" spy={true} smooth={true} offset={-70} duration={500}>
+          <Link
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-85}
+            duration={500}
+            activeClass="active"
+          >
             Skills
           </Link>
         </MenuItem>
         <MenuItem>
-          <Link to="projects" spy={true} smooth={true} offset={-70} duration={500}>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-85}
+            duration={500}
+            activeClass="active"
+          >
             Projects
           </Link>
         </MenuItem>
         <MenuItem>
           <Link
-            to="experience" // 해당 컴포넌트의 id와 동일한 이름을 사용
+            to="experience"
             spy={true}
             smooth={true}
-            offset={-70} // 스크롤 위치를 조절할 수 있습니다.
+            offset={-110}
             duration={500}
+            activeClass="active"
           >
             Experience
           </Link>

@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     html, body {
-        background-color: #d7dae1;
+        background-color: #eceef3;
         height: 100%;
         padding: 0;
         margin: 0;

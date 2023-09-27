@@ -5,8 +5,8 @@ const InfoWrapper = styled.div`
   height: 36rem;
   padding: 3rem 1.6rem;
   position: sticky;
-  top: 2rem;
-  background-color: #282c34;
+  top: 83.5px;
+  background-color: #485276;
   color: white;
 `;
 
