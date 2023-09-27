@@ -33,10 +33,10 @@ const MenuItem = styled.li`
   display: inline-block;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  border-radius: 3rem;
   &:hover {
-    scale: 1.07;
+    scale: 1.05;
     background-color: #485276;
-    border-radius: 3rem;
     color: white;
   }
   a {

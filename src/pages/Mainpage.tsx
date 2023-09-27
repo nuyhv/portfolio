@@ -6,7 +6,7 @@ const MainpageWrapper = styled.section`
   display: flex;
   justify-content: center;
   column-gap: 2rem;
-  padding-bottom: 17rem;
+  padding: 0 1rem 17rem 1rem;
 `;
 
 const Mainpage = () => {
