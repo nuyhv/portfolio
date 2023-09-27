@@ -8,9 +8,11 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
 
-    body {
-      display: block;
-      background-color: #d7dae1;
+    html, body {
+        background-color: #d7dae1;
+        height: 100%;
+        padding: 0;
+        margin: 0;
     }
     `;
 export default GlobalStyle;
