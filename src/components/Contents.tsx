@@ -10,6 +10,7 @@ const ContentsWrapper = styled.div`
   width: 100vw;
   max-width: 58rem;
   row-gap: 2rem;
+  scroll-behavior: smooth;
 `;
 
 const Contents = () => {
