@@ -73,7 +73,6 @@ Error generating stack: `+i.message+`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        line-height: initial;
     }
 
     html, body {
@@ -115,6 +114,8 @@ Error generating stack: `+i.message+`
   box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
 `,To=lt.li`
   display: inline-block;
+  line-height: initial;
+  font-family: "Helvetica, Arial, sans-serif";
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 3rem;
