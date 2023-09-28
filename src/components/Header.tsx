@@ -7,6 +7,7 @@ const HeaderWarpper = styled.header`
   padding: 1rem;
   text-align: center;
   color: #485276;
+  z-index: 100;
 
   @keyframes dropHeader {
     0% {
@@ -31,6 +32,7 @@ const MenuList = styled.ul`
 `;
 const MenuItem = styled.li`
   display: inline-block;
+  line-height: initial;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 3rem;
@@ -41,13 +43,14 @@ const MenuItem = styled.li`
   }
   a {
     display: block;
-    padding: 1rem;
+    font-size: 0.9rem;
+    padding: 0.9rem;
     text-decoration: none;
     color: inherit;
     &.active {
       transition: all 0.3s ease-in-out;
       background-color: #485276;
-      border-radius: 10rem;
+      border-radius: 2rem;
       color: white;
     }
   }
@@ -62,7 +65,7 @@ const Header: React.FC = () => {
             to="aboutme" // 해당 컴포넌트의 id와 동일한 이름을 사용
             spy={true}
             smooth={true}
-            offset={-85} // 스크롤 위치를 조절할 수 있습니다.
+            offset={-80} // 스크롤 위치를 조절할 수 있습니다.
             duration={500}
             activeClass="active"
           >
@@ -74,7 +77,7 @@ const Header: React.FC = () => {
             to="skills"
             spy={true}
             smooth={true}
-            offset={-85}
+            offset={-80}
             duration={500}
             activeClass="active"
           >
@@ -86,7 +89,7 @@ const Header: React.FC = () => {
             to="projects"
             spy={true}
             smooth={true}
-            offset={-85}
+            offset={-80}
             duration={500}
             activeClass="active"
           >
@@ -98,7 +101,7 @@ const Header: React.FC = () => {
             to="experience"
             spy={true}
             smooth={true}
-            offset={-110}
+            offset={-120}
             duration={500}
             activeClass="active"
           >
