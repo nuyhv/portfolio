@@ -33,6 +33,7 @@ const MenuList = styled.ul`
 const MenuItem = styled.li`
   display: inline-block;
   line-height: initial;
+  font-family: "Open Sans", sans-serif;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 3rem;
@@ -47,6 +48,10 @@ const MenuItem = styled.li`
     padding: 0.9rem;
     text-decoration: none;
     color: inherit;
+    @media screen and (max-width: 375px) {
+      font-size: 0.8rem;
+      padding: 0.8rem;
+    }
     &.active {
       transition: all 0.3s ease-in-out;
       background-color: #485276;
@@ -101,7 +106,7 @@ const Header: React.FC = () => {
             to="experience"
             spy={true}
             smooth={true}
-            offset={-120}
+            offset={-80}
             duration={500}
             activeClass="active"
           >

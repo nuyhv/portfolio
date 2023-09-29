@@ -11,6 +11,7 @@ const ContentsWrapper = styled.div`
   max-width: 58rem;
   row-gap: 2rem;
   scroll-behavior: smooth;
+  padding-bottom: 80.3px;
 `;
 
 const Contents = () => {
