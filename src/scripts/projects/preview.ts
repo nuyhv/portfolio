@@ -11,13 +11,39 @@ interface Project {
   desc: string[];
 }
 
+export const infoScripts = [
+  {
+    id: 1,
+    name: "송상현",
+    dev: "Frontend Developer",
+    contact: [
+      { name: "Phone", title: "010-3513-7552", img: "src/assets/images/phone.svg" },
+      { name: "Gmail", title: "volumefd@gmail.com", img: "src/assets/images/gmail.svg" },
+      {
+        name: "Github",
+        title: "Github",
+        img: "src/assets/images/github.svg",
+        link: "https://github.com/nuyhv",
+      },
+      {
+        name: "Velog",
+        title: "Blog",
+        img: "src/assets/images/velog.svg",
+        bgcolor: "#485276",
+        width: "32px",
+        link: "https://velog.io/@ss_hyun",
+      },
+    ],
+  },
+];
+
 export const projectScripts: Project[] = [
   {
     id: 1,
     title: "빵 오더",
     period: "2023.08.24 ~ 2023.09.22",
     skills: ["React", "Javacript", "Tailwind CSS", "Styled-Components", "Zustand"],
-    image: "/src/assets/images/bbangorder.png",
+    image: "src/assets/images/bbangorder.png",
     routePath: "/bbangorder",
     demoLink: "http://bbangorder.s3-website.ap-northeast-2.amazonaws.com/",
     repoLink: "https://github.com/codestates-seb/seb45_main_014",
@@ -27,18 +53,6 @@ export const projectScripts: Project[] = [
   },
   {
     id: 2,
-    title: "My Portfolio",
-    period: "2023.09.27 ~ ing",
-    skills: ["React", "Typescript", "Tailwind CSS", "Styled-Components", "Vite"],
-    image: "",
-    routePath: "/myportfolio",
-    demoLink: "",
-    repoLink: "",
-    subTitle: "This is my portfolio website. I used React, Typescript, Tailwind CSS, and Vite.",
-    desc: [],
-  },
-  {
-    id: 3,
     title: "Stack Overflow 클론",
     period: "2023.08.04 ~ 2023.08.23",
     skills: ["React", "Typescript", "Tailwind CSS", "Vite"],
@@ -47,6 +61,18 @@ export const projectScripts: Project[] = [
     demoLink: "",
     repoLink: "",
     subTitle: "Stack Overflow의 질문 페이지를 클론 코딩했습니다.",
+    desc: [],
+  },
+  {
+    id: 3,
+    title: "My Portfolio",
+    period: "2023.09.27 ~ ing",
+    skills: ["React", "Typescript", "Tailwind CSS", "Styled-Components", "Vite"],
+    image: "",
+    routePath: "/myportfolio",
+    demoLink: "",
+    repoLink: "",
+    subTitle: "This is my portfolio website. I used React, Typescript, Tailwind CSS, and Vite.",
     desc: [],
   },
 ];
