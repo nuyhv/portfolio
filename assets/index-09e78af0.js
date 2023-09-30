@@ -181,7 +181,7 @@ Error generating stack: `+i.message+`
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-`,Jy=()=>T.jsx(Gy,{children:Yy.map(e=>T.jsxs("section",{children:[T.jsxs("div",{className:"flex gap-4",children:[T.jsx(Zy,{children:T.jsx("img",{src:`/portfolio//${e.avatar}`,alt:e.name,width:"100",height:"100",className:"hover:scale-105 transition-all duration-300"})}),T.jsxs("div",{children:[T.jsx("h1",{className:"mb-1",children:e.name}),T.jsx("p",{children:e.dev})]})]}),T.jsxs("ul",{className:"mt-10 flex flex-col gap-y-6",children:[T.jsx("p",{className:"text-xl font-semibold",children:"Contact"}),e.contact.map(t=>T.jsx(Xy,{children:T.jsxs("a",{href:t.link,target:"_blank",rel:"noreferrer",className:"flex gap-2 items-center",children:[T.jsx(qy,{bgcolor:t.bgcolor,children:T.jsx("img",{src:`/portfolio//${t.img}`,alt:t.name,width:t.width||"25",className:" rounded-[50%]"})}),t.title]})}))]})]}))}),el=ze.section`
+`,Jy=()=>T.jsx(Gy,{children:Yy.map(e=>T.jsxs("section",{children:[T.jsxs("div",{className:"flex gap-4",children:[T.jsx(Zy,{children:T.jsx("img",{src:`/portfolio/${e.avatar}`,alt:e.name,width:"100",height:"100",className:"hover:scale-105 transition-all duration-300"})}),T.jsxs("div",{children:[T.jsx("h1",{className:"mb-1",children:e.name}),T.jsx("p",{children:e.dev})]})]}),T.jsxs("ul",{className:"mt-10 flex flex-col gap-y-6",children:[T.jsx("p",{className:"text-xl font-semibold",children:"Contact"}),e.contact.map(t=>T.jsx(Xy,{children:T.jsxs("a",{href:t.link,target:"_blank",rel:"noreferrer",className:"flex gap-2 items-center",children:[T.jsx(qy,{bgcolor:t.bgcolor,children:T.jsx("img",{src:`/portfolio/${t.img}`,alt:t.name,width:t.width||"25",className:" rounded-[50%]"})}),t.title]})}))]})]}))}),el=ze.section`
   min-height: 36rem;
   padding: 3rem;
   border-radius: 1rem;
@@ -209,7 +209,7 @@ Error generating stack: `+i.message+`
       scale: 1.03;
     }
   }
-`,o1=()=>T.jsx("section",{id:"projects",className:"flex flex-col gap-8",children:Ky.map(e=>T.jsxs(el,{"data-aos":"fade-left",children:[T.jsx("h1",{children:"Projects"}),T.jsx(r1,{children:T.jsx("img",{src:`/portfolio//${e.image}`,alt:e.title})}),T.jsx("h2",{className:"text-2xl font-semibold py-2",children:e.title}),T.jsx("div",{children:e.skills.map(t=>T.jsx(e1,{children:t},t))}),T.jsx("p",{children:e.subTitle})]},e.id))}),i1=()=>T.jsxs(el,{id:"experience","data-aos":"fade-left",children:[T.jsx("h1",{children:"Experience"}),T.jsx("p",{children:"이력 들어갈거임"})]}),l1=ze.div`
+`,o1=()=>T.jsx("section",{id:"projects",className:"flex flex-col gap-8",children:Ky.map(e=>T.jsxs(el,{"data-aos":"fade-left",children:[T.jsx("h1",{children:"Projects"}),T.jsx(r1,{children:T.jsx("img",{src:`/portfolio/${e.image}`,alt:e.title})}),T.jsx("h2",{className:"text-2xl font-semibold py-2",children:e.title}),T.jsx("div",{children:e.skills.map(t=>T.jsx(e1,{children:t},t))}),T.jsx("p",{children:e.subTitle})]},e.id))}),i1=()=>T.jsxs(el,{id:"experience","data-aos":"fade-left",children:[T.jsx("h1",{children:"Experience"}),T.jsx("p",{children:"이력 들어갈거임"})]}),l1=ze.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
