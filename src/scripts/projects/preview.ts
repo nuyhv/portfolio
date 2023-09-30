@@ -40,6 +40,138 @@ export const infoScripts = [
   },
 ];
 
+export const skillsScripts = [
+  {
+    title: "Frontend",
+    skills: [
+      {
+        id: 1,
+        name: "React",
+        img: "https://img.icons8.com/color/144/react-native.png",
+        bgcolor: "#61dafb",
+      },
+      {
+        id: 2,
+        name: "JavaScript",
+        img: "https://img.icons8.com/color/144/javascript--v1.png",
+        bgcolor: "#f0db4f",
+      },
+      {
+        id: 3,
+        name: "Typescript",
+        img: "https://img.icons8.com/color/144/typescript.png",
+        bgcolor: "#3178c6",
+      },
+      {
+        id: 4,
+        name: "HTML",
+        img: "https://img.icons8.com/color/144/html-5.png",
+        bgcolor: "#e34f26",
+      },
+      {
+        id: 5,
+        name: "CSS",
+        img: "https://img.icons8.com/color/144/css3.png",
+        bgcolor: "#2965f1",
+      },
+      {
+        id: 6,
+        name: "Tailwind",
+        img: "https://img.icons8.com/color/144/tailwind_css.png",
+        bgcolor: "#06b6d4",
+      },
+      {
+        id: 7,
+        name: "Styled-Components",
+        img: "https://img.icons8.com/color/144/styled-components.png",
+        bgcolor: "#db7093",
+      },
+      {
+        id: 8,
+        name: "Redux",
+        img: "https://img.icons8.com/color/144/redux.png",
+        bgcolor: "#764abc",
+      },
+      {
+        id: 10,
+        name: "Zustand",
+        img: images.zustand,
+        bgcolor: "#764abc",
+      },
+      {
+        id: 11,
+        name: "Vite",
+        img: "https://img.icons8.com/color/144/vite.png",
+        bgcolor: "#646c7a",
+      },
+    ],
+  },
+  {
+    title: "Backend",
+    skills: [
+      {
+        id: 1,
+        name: "Node.js",
+        img: "https://img.icons8.com/color/144/nodejs.png",
+        bgcolor: "#339933",
+      },
+      {
+        id: 2,
+        name: "Express",
+        img: "https://img.icons8.com/color/144/express-js.png",
+        bgcolor: "#000000",
+      },
+      {
+        id: 3,
+        name: "AWS",
+        img: "https://img.icons8.com/color/144/amazon-web-services.png",
+        bgcolor: "#232f3e",
+      },
+    ],
+  },
+  {
+    title: "Etc",
+    skills: [
+      {
+        id: 1,
+        name: "Git",
+        img: "https://img.icons8.com/color/144/git.png",
+        bgcolor: "#f05032",
+      },
+      {
+        id: 2,
+        name: "Github",
+        img: "https://img.icons8.com/fluency/144/github.png",
+        bgcolor: "#181717",
+      },
+      {
+        id: 3,
+        name: "Discord",
+        img: "https://img.icons8.com/color/144/discord.png",
+        bgcolor: "#4a154b",
+      },
+      {
+        id: 4,
+        name: "Zoom",
+        img: "https://img.icons8.com/color/144/zoom.png",
+        bgcolor: "#2d8cff",
+      },
+      {
+        id: 5,
+        name: "Notion",
+        img: "https://img.icons8.com/color/144/notion.png",
+        bgcolor: "#000000",
+      },
+      {
+        id: 6,
+        name: "Figma",
+        img: "https://img.icons8.com/color/144/figma.png",
+        bgcolor: "#f24e1e",
+      },
+    ],
+  },
+];
+
 export const projectScripts: Project[] = [
   {
     id: 1,
@@ -58,8 +190,8 @@ export const projectScripts: Project[] = [
     id: 2,
     title: "Stack Overflow 클론",
     period: "2023.08.04 ~ 2023.08.23",
-    skills: ["React", "Typescript", "Tailwind CSS", "Vite"],
-    image: "",
+    skills: ["React", "JavaScript", "Styled-Components", "Redux-toolkit"],
+    image: images.stackclone,
     routePath: "/stackoverflow",
     demoLink: "",
     repoLink: "",
