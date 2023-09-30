@@ -1,3 +1,5 @@
+import images from "../../assets/images/images";
+
 interface Project {
   id: number;
   title: string;
@@ -15,21 +17,21 @@ export const infoScripts = [
   {
     id: 1,
     name: "송상현",
-    avatar: "src/assets/images/icebear.png",
+    avatar: images.icebear,
     dev: "Frontend Developer",
     contact: [
-      { name: "Phone", title: "010-3513-7552", img: "src/assets/images/phone.svg" },
-      { name: "Gmail", title: "volumefd@gmail.com", img: "src/assets/images/gmail.svg" },
+      { name: "Phone", title: "010-3513-7552", img: images.phone },
+      { name: "Gmail", title: "volumefd@gmail.com", img: images.gmail },
       {
         name: "Github",
         title: "Github",
-        img: "src/assets/images/github.svg",
+        img: images.github,
         link: "https://github.com/nuyhv",
       },
       {
         name: "Velog",
         title: "Blog",
-        img: "src/assets/images/velog.svg",
+        img: images.velog,
         bgcolor: "#485276",
         width: "32px",
         link: "https://velog.io/@ss_hyun",
@@ -44,7 +46,7 @@ export const projectScripts: Project[] = [
     title: "빵 오더",
     period: "2023.08.24 ~ 2023.09.22",
     skills: ["React", "Javacript", "Tailwind CSS", "Styled-Components", "Zustand"],
-    image: "src/assets/images/bbangorder.png",
+    image: images.bbangorder,
     routePath: "/bbangorder",
     demoLink: "http://bbangorder.s3-website.ap-northeast-2.amazonaws.com/",
     repoLink: "https://github.com/codestates-seb/seb45_main_014",
