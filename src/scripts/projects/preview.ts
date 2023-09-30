@@ -15,6 +15,7 @@ export const infoScripts = [
   {
     id: 1,
     name: "송상현",
+    avatar: "src/assets/images/icebear.png",
     dev: "Frontend Developer",
     contact: [
       { name: "Phone", title: "010-3513-7552", img: "src/assets/images/phone.svg" },

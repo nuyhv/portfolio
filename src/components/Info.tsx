@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { infoScripts } from "../scripts/projects/preview";
 
 const InfoWrapper = styled.div`
-  width: 18rem;
+  min-width: 18rem;
   min-height: 36rem;
   height: calc(100vh - 80.3px * 2);
   padding: 3rem 1.6rem;
@@ -45,17 +45,35 @@ const Icon = styled.div<IconProps>`
   background-color: ${(props) => props.bgcolor || "white"};
 `;
 
+const Avatar = styled.div`
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+`;
+
 const Info: React.FC = () => {
   return (
     <InfoWrapper>
       {infoScripts.map((info) => (
         <section>
-          <div>
-            <h1 className="mb-1">{info.name}</h1>
-            <p>{info.dev}</p>
+          <div className="flex gap-4">
+            <Avatar>
+              <img
+                src={info.avatar}
+                alt={info.name}
+                width="100"
+                height="100"
+                className="hover:scale-105 transition-all duration-300"
+              />
+            </Avatar>
+            <div>
+              <h1 className="mb-1">{info.name}</h1>
+              <p>{info.dev}</p>
+            </div>
           </div>
           <ul className="mt-10 flex flex-col gap-y-6">
-            <p className="text-lg font-semibold">Contact</p>
+            <p className="text-xl font-semibold">Contact</p>
             {info.contact.map((contact) => (
               <Contactlist>
                 <a
