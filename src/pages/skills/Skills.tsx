@@ -35,7 +35,7 @@ const Skill = styled.div`
 
 const Skills: React.FC = () => {
   return (
-    <ContentWrapper id="skills" data-aos="fade-left">
+    <ContentWrapper id="skills" data-aos="fade-up">
       <h1>Skills</h1>
       <div className="flex flex-wrap gap-4 justify-between">
         {skillsScripts.map((category) => (
