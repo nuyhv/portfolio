@@ -20,7 +20,7 @@ const Projects = () => {
   return (
     <section id="projects" className="flex flex-col gap-8">
       {projectScripts.map((project) => (
-        <ContentWrapper key={project.id} data-aos="fade-up">
+        <ContentWrapper key={project.id} data-aos="fade-left">
           <h1>Projects</h1>
           <ImgContainer>
             <img src={project.image} alt={project.title} />
