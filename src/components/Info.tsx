@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { infoScripts } from "../scripts/projects/preview";
 
 const InfoWrapper = styled.div`
-  min-width: 18rem;
+  min-width: 19rem;
   min-height: 36rem;
   height: calc(100vh - 80.3px * 2);
   padding: 3rem 1.6rem;
