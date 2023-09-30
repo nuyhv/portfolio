@@ -197,7 +197,7 @@ Error generating stack: `+i.message+`
   color: #485276;
   font-size: 0.8rem;
   font-weight: 600;
-`,t1=()=>T.jsxs(el,{id:"aboutme",children:[T.jsx("h1",{children:"About me"}),T.jsx("p",{children:"내소개 어쩌고저쩌고"})]}),n1=()=>T.jsxs(el,{id:"skills","data-aos":"fade-left",children:[T.jsx("h1",{children:"Skills"}),T.jsx("p",{children:"내가 보유한 스택 이미지로 보여주기"})]}),r1=ze.div`
+`,t1=()=>T.jsxs(el,{id:"aboutme",children:[T.jsx("h1",{children:"About me"}),T.jsx("p",{children:"내소개 어쩌고저쩌고 안녕"})]}),n1=()=>T.jsxs(el,{id:"skills","data-aos":"fade-left",children:[T.jsx("h1",{children:"Skills"}),T.jsx("p",{children:"내가 보유한 스택 이미지로 보여주기"})]}),r1=ze.div`
   width: 100%;
   height: 20rem;
   overflow: hidden;
