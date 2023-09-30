@@ -74,7 +74,7 @@ const Header: React.FC = () => {
             duration={500}
             activeClass="active"
           >
-            About Me
+            <span>About Me</span>
           </Link>
         </MenuItem>
         <MenuItem>
@@ -86,7 +86,7 @@ const Header: React.FC = () => {
             duration={500}
             activeClass="active"
           >
-            Skills
+            <span>Skills</span>
           </Link>
         </MenuItem>
         <MenuItem>
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
             duration={500}
             activeClass="active"
           >
-            Projects
+            <span>Projects</span>
           </Link>
         </MenuItem>
         <MenuItem>
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
             duration={500}
             activeClass="active"
           >
-            Experience
+            <span>Experience</span>
           </Link>
         </MenuItem>
       </MenuList>
