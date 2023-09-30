@@ -2,6 +2,7 @@ import * as React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Mainpage from "./pages/Mainpage";
+import ScrollButton from "./components/ScrollButton";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <>
+      <ScrollButton />
       <Header />
       <Mainpage />
     </>
