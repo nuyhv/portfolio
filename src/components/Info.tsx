@@ -4,7 +4,7 @@ import { infoScripts } from "../scripts/projects/preview";
 const InfoWrapper = styled.div`
   min-width: 19rem;
   height: calc(100vh - 80.3px * 2);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 80.3px;
@@ -23,7 +23,7 @@ const InfoWrapper = styled.div`
 `;
 
 const InfoCard = styled.div`
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   padding: 3rem 1.6rem;
   background-color: #485276;
 `;
