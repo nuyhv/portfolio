@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import images from "../images/images";
 
 export const ContentWrapper = styled.section`
   min-height: 36rem;
@@ -6,6 +7,17 @@ export const ContentWrapper = styled.section`
   border-radius: 2rem;
   box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
   background-color: white;
+  overflow: hidden;
+  h1 {
+    position: relative;
+    left: -48px;
+    padding-left: 48px;
+    background-image: url(${images.ribbon});
+    background-repeat: no-repeat;
+    background-size: 18rem;
+    background-position: -48px;
+    color: white;
+  }
 `;
 
 export const Tag = styled.span`
