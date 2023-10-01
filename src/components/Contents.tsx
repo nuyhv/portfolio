@@ -12,6 +12,9 @@ const ContentsWrapper = styled.div`
   row-gap: 2rem;
   scroll-behavior: smooth;
   padding-bottom: 80.3px;
+  @media screen and (max-width: 768px) {
+    padding: 0 1.5rem 3rem 1.5rem;
+  }
 `;
 
 const Contents = () => {
