@@ -6,6 +6,7 @@ import velog from "./velog.svg";
 import icebear from "./icebear.png";
 import stackclone from "./stackoverflow.png";
 import zustand from "./zustand.png";
+import ribbon from "./ribbon.svg";
 
 const images = {
   bbangorder,
@@ -16,6 +17,7 @@ const images = {
   icebear,
   stackclone,
   zustand,
+  ribbon,
 };
 
 export default images;
