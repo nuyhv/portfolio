@@ -11,7 +11,12 @@ const InfoWrapper = styled.div`
   background-color: #3a4466;
   color: white;
   @media screen and (max-width: 768px) {
-    display: none;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    bottom: 0;
+    top: 0;
+    border-radius: 0;
   }
   a {
     transition: all 0.3s ease-in-out;
@@ -26,9 +31,30 @@ const InfoCard = styled.div`
   border-radius: 1.5rem;
   padding: 3rem 1.6rem;
   background-color: #485276;
+  @media screen and (max-width: 768px) {
+    border-radius: 0;
+  }
 `;
 
-const Contactlist = styled.li`
+const InfoSection = styled.section`
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+const Contactlist = styled.ul`
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  @media screen and (max-width: 768px) {
+    margin: 0;
+  }
+`;
+
+const Contact = styled.li`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -61,7 +87,7 @@ const Info: React.FC = () => {
     <InfoWrapper>
       <InfoCard>
         {infoScripts.map((info) => (
-          <section>
+          <InfoSection>
             <div className="flex gap-4">
               <Avatar>
                 <img
@@ -77,10 +103,10 @@ const Info: React.FC = () => {
                 <p>{info.dev}</p>
               </div>
             </div>
-            <ul className="mt-10 flex flex-col gap-y-6">
+            <Contactlist>
               <p className="text-xl font-semibold">Contact</p>
               {info.contact.map((contact) => (
-                <Contactlist>
+                <Contact>
                   <a
                     href={contact.link}
                     target="_blank"
@@ -97,10 +123,10 @@ const Info: React.FC = () => {
                     </Icon>
                     {contact.title}
                   </a>
-                </Contactlist>
+                </Contact>
               ))}
-            </ul>
-          </section>
+            </Contactlist>
+          </InfoSection>
         ))}
       </InfoCard>
     </InfoWrapper>
