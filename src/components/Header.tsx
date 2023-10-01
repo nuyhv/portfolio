@@ -1,7 +1,8 @@
+import * as React from "react";
 import { styled } from "styled-components";
 import { Link } from "react-scroll";
 
-const HeaderWarpper = styled.header`
+const HeaderWrapper = styled.header`
   position: sticky;
   top: 0;
   padding: 1rem;
@@ -52,69 +53,100 @@ const MenuItem = styled.li`
       font-size: 0.8rem;
       padding: 0.8rem;
     }
-    &.active {
-      transition: all 0.3s ease-in-out;
-      background-color: #485276;
-      border-radius: 2rem;
-      color: white;
-    }
+  }
+  &.active {
+    transition: all 0.3s ease-in-out;
+    background-color: #485276;
+    border-radius: 2rem;
+    color: white;
   }
 `;
 
 const Header: React.FC = () => {
+  const [activeSection, setActiveSection] = React.useState<string | null>(null);
+
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    // const aboutMe = document.getElementById("aboutme");
+    const skills = document.getElementById("skills");
+    const projects = document.getElementById("projects");
+    const experience = document.getElementById("experience");
+
+    if (scrollY < skills!.offsetTop - 80) {
+      setActiveSection("aboutme");
+    }
+    if (scrollY >= skills!.offsetTop - 80 && scrollY < projects!.offsetTop - 80) {
+      setActiveSection("skills");
+    }
+    if (scrollY >= projects!.offsetTop - 80 && scrollY < experience!.offsetTop - 80) {
+      setActiveSection("projects");
+    }
+    // 스크롤이 맨 아래에 도달하면 experience가 active가 되도록
+    if (scrollY + window.innerHeight >= document.body.scrollHeight) {
+      setActiveSection("experience");
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <HeaderWarpper>
+    <HeaderWrapper>
       <MenuList>
-        <MenuItem>
+        <MenuItem className={activeSection === "aboutme" ? "active" : ""}>
           <Link
-            to="aboutme" // 해당 컴포넌트의 id와 동일한 이름을 사용
+            to="aboutme"
             spy={true}
             smooth={true}
-            offset={-80} // 스크롤 위치를 조절할 수 있습니다.
+            offset={-80}
             duration={500}
-            activeClass="active"
+            // activeClass="active"
           >
             <span>About Me</span>
           </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className={activeSection === "skills" ? "active" : ""}>
           <Link
             to="skills"
             spy={true}
             smooth={true}
             offset={-80}
             duration={500}
-            activeClass="active"
+            // activeClass="active"
           >
             <span>Skills</span>
           </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className={activeSection === "projects" ? "active" : ""}>
           <Link
             to="projects"
             spy={true}
             smooth={true}
             offset={-80}
             duration={500}
-            activeClass="active"
+            // activeClass="active"
           >
             <span>Projects</span>
           </Link>
         </MenuItem>
-        <MenuItem>
+        <MenuItem className={activeSection === "experience" ? "active" : ""}>
           <Link
             to="experience"
             spy={true}
             smooth={true}
             offset={-80}
             duration={500}
-            activeClass="active"
+            // activeClass="active"
           >
             <span>Experience</span>
           </Link>
         </MenuItem>
       </MenuList>
-    </HeaderWarpper>
+    </HeaderWrapper>
   );
 };
 
