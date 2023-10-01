@@ -4,7 +4,7 @@ import Skills from "../pages/skills/Skills";
 import Projects from "../pages/projects/Projects";
 import Experience from "../pages/experience/Experience";
 
-const ContentsWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -19,12 +19,12 @@ const ContentsWrapper = styled.div`
 
 const Contents = () => {
   return (
-    <ContentsWrapper>
+    <Wrapper>
       <Aboutme />
       <Skills />
       <Projects />
       <Experience />
-    </ContentsWrapper>
+    </Wrapper>
   );
 };
 
