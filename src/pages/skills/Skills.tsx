@@ -14,7 +14,7 @@ const SkillCard = styled.div`
   text-align: center;
   overflow: hidden;
   &:hover {
-    scale: 1.03;
+    scale: 1.05;
   }
   img {
     width: 100%;
@@ -24,6 +24,18 @@ const SkillCard = styled.div`
   }
 `;
 
+const SkillName = styled.span`
+  display: none;
+  position: absolute;
+  margin-top: 4rem;
+  font-weight: 600;
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  z-index: 10;
+`;
+
 const Skill = styled.div`
   display: flex;
   flex-direction: column;
@@ -31,23 +43,40 @@ const Skill = styled.div`
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   gap: 0.2rem;
+  &:hover {
+    ${SkillCard} {
+      scale: 1.05;
+    }
+    ${SkillName} {
+      display: block;
+    }
+  }
+  ${SkillName}::before {
+    content: "";
+    position: absolute;
+    top: -0.55rem;
+    left: 40%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
 `;
 
 const Skills: React.FC = () => {
   return (
     <ContentWrapper id="skills" data-aos="fade-up">
       <h1>Skills</h1>
-      <div className="flex flex-wrap gap-4 justify-between">
+      <div className="flex flex-col gap-10">
         {skillsScripts.map((category) => (
           <section key={category.title}>
             <h2 className="text-2xl font-semibold pb-2">{category.title}</h2>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               {category.skills.map((skill) => (
                 <Skill key={skill.id}>
                   <SkillCard>
                     <img src={skill.img} alt={skill.name} />
                   </SkillCard>
-                  <span>{skill.name}</span>
+                  <SkillName>{skill.name}</SkillName>
                 </Skill>
               ))}
             </div>
