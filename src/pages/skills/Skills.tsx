@@ -55,10 +55,11 @@ const Skill = styled.div`
     content: "";
     position: absolute;
     top: -0.55rem;
-    left: 40%;
+    left: 50%;
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent black transparent;
+    transform: translateX(-50%);
   }
 `;
 
