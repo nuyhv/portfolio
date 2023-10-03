@@ -37,6 +37,7 @@ const InfoCard = styled.div`
 `;
 
 const InfoSection = styled.section`
+  overflow: hidden;
   @media screen and (max-width: 768px) {
     display: flex;
     justify-content: space-between;
@@ -82,6 +83,11 @@ const Avatar = styled.div`
   overflow: hidden;
 `;
 
+const Title = styled.span`
+  font-size: 1rem;
+  font-weight: 600;
+`;
+
 const Info: React.FC = () => {
   return (
     <InfoWrapper>
@@ -121,7 +127,7 @@ const Info: React.FC = () => {
                         className=" rounded-[50%]"
                       />
                     </Icon>
-                    {contact.title}
+                    <Title>{contact.title}</Title>
                   </a>
                 </Contact>
               ))}
