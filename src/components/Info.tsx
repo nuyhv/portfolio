@@ -18,19 +18,6 @@ const InfoWrapper = styled.div`
     top: 0;
     border-radius: 0;
   }
-  a {
-    width: max-content;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      color: #fff;
-      scale: 1.05;
-    }
-    @media screen and (max-width: 768px) {
-      &:hover {
-        color: #3a4466;
-      }
-    }
-  }
 `;
 
 const InfoCard = styled.div`
@@ -87,15 +74,19 @@ const Title = styled.span`
     border-radius: 0.5rem;
     color: white;
     padding: 0.2rem 0.5rem;
-    z-index: 10;
   }
 `;
 
 const ContactItem = styled.div`
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
+  &:hover {
+    scale: 1.05;
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    transition: none;
     align-items: center;
     &:hover {
       ${Title} {
