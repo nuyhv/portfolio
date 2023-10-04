@@ -81,8 +81,11 @@ const Header: React.FC = () => {
     if (scrollY >= projects!.offsetTop - 80 && scrollY < experience!.offsetTop - 80) {
       setActiveSection("projects");
     }
-    // 스크롤이 맨 아래에 도달하면 experience가 active가 되도록
-    if (scrollY + window.innerHeight >= document.body.scrollHeight) {
+    // 스크롤이 맨 아래에 도달할때도 experience를 active로 표시하도록 함
+    if (
+      scrollY >= experience!.offsetTop - 80 ||
+      scrollY + window.innerHeight >= document.body.scrollHeight
+    ) {
       setActiveSection("experience");
     }
   };
