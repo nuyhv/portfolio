@@ -33,14 +33,17 @@ const InfoCard = styled.div`
   background-color: #485276;
   @media screen and (max-width: 768px) {
     border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
   }
 `;
 
 const InfoSection = styled.section`
-  overflow: hidden;
   @media screen and (max-width: 768px) {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
   }
 `;
 
@@ -51,15 +54,19 @@ const Contactlist = styled.ul`
   gap: 1.5rem;
   font-family: "Open Sans", sans-serif;
   @media screen and (max-width: 768px) {
-    margin: 0;
+    align-items: center;
+    gap: 1rem;
   }
 `;
 
 const Contact = styled.li`
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 1.5rem;
   font-family: "Open Sans", sans-serif;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 interface IconProps {
@@ -81,11 +88,17 @@ const Avatar = styled.div`
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
+  /* @media screen and (max-width: 768px) { */
+  /* display: none; */
+  /* } */
 `;
 
 const Title = styled.span`
   font-size: 1rem;
   font-weight: 600;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Info: React.FC = () => {
@@ -111,8 +124,8 @@ const Info: React.FC = () => {
             </div>
             <Contactlist>
               <p className="text-xl font-semibold">Contact</p>
-              {info.contact.map((contact) => (
-                <Contact>
+              <Contact>
+                {info.contact.map((contact) => (
                   <a
                     href={contact.link}
                     target="_blank"
@@ -129,8 +142,8 @@ const Info: React.FC = () => {
                     </Icon>
                     <Title>{contact.title}</Title>
                   </a>
-                </Contact>
-              ))}
+                ))}
+              </Contact>
             </Contactlist>
           </InfoSection>
         ))}
