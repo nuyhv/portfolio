@@ -71,7 +71,7 @@ const Skills: React.FC = () => {
         {skillsScripts.map((category) => (
           <section key={category.title}>
             <h2 className="text-2xl font-semibold pb-2">{category.title}</h2>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {category.skills.map((skill) => (
                 <Skill key={skill.id}>
                   <SkillCard>
