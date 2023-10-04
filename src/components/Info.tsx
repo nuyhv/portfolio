@@ -19,10 +19,16 @@ const InfoWrapper = styled.div`
     border-radius: 0;
   }
   a {
+    width: max-content;
     transition: all 0.3s ease-in-out;
     &:hover {
       color: #fff;
       scale: 1.05;
+    }
+    @media screen and (max-width: 768px) {
+      &:hover {
+        color: #3a4466;
+      }
     }
   }
 `;
@@ -69,6 +75,50 @@ const Contact = styled.li`
   }
 `;
 
+const Title = styled.span`
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  @media screen and (max-width: 768px) {
+    display: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: black;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    z-index: 10;
+  }
+`;
+
+const ContactItem = styled.div`
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      ${Title} {
+        display: flex;
+        width: max-content;
+        position: absolute;
+        bottom: -60%;
+        z-index: 10;
+      }
+    }
+    ${Title}::before {
+      content: "";
+      position: absolute;
+      top: -0.55rem;
+      left: 50%;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent black transparent;
+      transform: translateX(-50%);
+    }
+  }
+`;
+
 interface IconProps {
   bgcolor?: string;
 }
@@ -88,17 +138,6 @@ const Avatar = styled.div`
   height: 90px;
   border-radius: 50%;
   overflow: hidden;
-  /* @media screen and (max-width: 768px) { */
-  /* display: none; */
-  /* } */
-`;
-
-const Title = styled.span`
-  font-size: 1rem;
-  font-weight: 600;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
 
 const Info: React.FC = () => {
@@ -132,15 +171,17 @@ const Info: React.FC = () => {
                     rel="noreferrer"
                     className="flex gap-2 items-center"
                   >
-                    <Icon bgcolor={contact.bgcolor}>
-                      <img
-                        src={contact.img}
-                        alt={contact.name}
-                        width={contact.width || "25"}
-                        className=" rounded-[50%]"
-                      />
-                    </Icon>
-                    <Title>{contact.title}</Title>
+                    <ContactItem>
+                      <Icon bgcolor={contact.bgcolor}>
+                        <img
+                          src={contact.img}
+                          alt={contact.name}
+                          width={contact.width || "25"}
+                          className=" rounded-[50%]"
+                        />
+                      </Icon>
+                      <Title>{contact.title}</Title>
+                    </ContactItem>
                   </a>
                 ))}
               </Contact>
