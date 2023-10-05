@@ -6,7 +6,7 @@ interface Project {
   subTitle: string;
   period: string;
   skills: string[];
-  image: string;
+  image: string[];
   routePath: string;
   demoLink: string;
   repoLink: string;
@@ -188,7 +188,7 @@ export const projectScripts: Project[] = [
     title: "빵 오더",
     period: "2023.08.24 ~ 2023.09.22",
     skills: ["React", "Javacript", "Tailwind CSS", "Styled-Components", "Zustand"],
-    image: images.bbangorder,
+    image: [images.bbangorder],
     routePath: "/bbangorder",
     demoLink: "http://bbangorder.s3-website.ap-northeast-2.amazonaws.com/",
     repoLink: "https://github.com/codestates-seb/seb45_main_014",
@@ -201,7 +201,7 @@ export const projectScripts: Project[] = [
     title: "Stack Overflow 클론",
     period: "2023.08.04 ~ 2023.08.23",
     skills: ["React", "JavaScript", "Styled-Components", "Redux-toolkit"],
-    image: images.stackclone,
+    image: [images.stackclone],
     routePath: "/stackoverflow",
     demoLink: "",
     repoLink: "",
@@ -213,7 +213,7 @@ export const projectScripts: Project[] = [
     title: "My Portfolio",
     period: "2023.09.27 ~ ing",
     skills: ["React", "Typescript", "Tailwind CSS", "Styled-Components", "Vite"],
-    image: "",
+    image: [],
     routePath: "/myportfolio",
     demoLink: "",
     repoLink: "",
