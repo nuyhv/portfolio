@@ -1,6 +1,9 @@
 import { ContentWrapper, Tag } from "../../assets/styles/CommonStyles.tsx";
 import styled from "styled-components";
 import { projectScripts } from "../../scripts/projects/preview.ts";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -17,15 +20,42 @@ const ImgContainer = styled.div`
   }
 `;
 
+const CustomSlider = styled(Slider)`
+  .slick-prev {
+    left: 20px;
+    z-index: 1;
+  }
+  .slick-next {
+    right: 20px;
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    color: #485276;
+  }
+`;
+
 const Projects = () => {
+  const settings = {
+    dots: true,
+    infinite: false,
+    speed: 500,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <section id="projects" className="flex flex-col gap-8">
       {projectScripts.map((project) => (
         <ContentWrapper key={project.id} data-aos="fade-up">
           <h1>Projects</h1>
-          <ImgContainer>
-            <img src={project.image} alt={project.title} />
-          </ImgContainer>
+          <CustomSlider {...settings}>
+            <ImgContainer>
+              <img src={project.image} alt={project.title} />
+            </ImgContainer>
+            <div>2</div>
+            <div>3</div>
+          </CustomSlider>
           <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
           <div>
             {project.skills.map((skills) => (
