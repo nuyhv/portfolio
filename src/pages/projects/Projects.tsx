@@ -42,6 +42,13 @@ const CustomSlider = styled(Slider)`
   }
 `;
 
+const NoImage = styled.div`
+  width: 100%;
+  height: 70%;
+  background-color: #d6d8df;
+  border-radius: 1rem;
+`;
+
 const Projects = () => {
   const settings = {
     dots: true,
@@ -57,13 +64,17 @@ const Projects = () => {
       {projectScripts.map((project) => (
         <ContentWrapper key={project.id} data-aos="fade-up">
           <h1>Projects</h1>
-          <CustomSlider {...settings}>
-            {project.image.map((image) => (
-              <ImgContainer key={image}>
-                <img src={image} alt={project.title} />
-              </ImgContainer>
-            ))}
-          </CustomSlider>
+          {project.image.length === 0 ? (
+            <NoImage />
+          ) : (
+            <CustomSlider {...settings}>
+              {project.image.map((image) => (
+                <ImgContainer key={image}>
+                  <img src={image} alt={project.title} />
+                </ImgContainer>
+              ))}
+            </CustomSlider>
+          )}
           <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
           <div>
             {project.skills.map((skills) => (
