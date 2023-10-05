@@ -20,8 +20,18 @@ export const infoScripts = [
     avatar: images.icebear,
     dev: "Frontend Developer",
     contact: [
-      { name: "Phone", title: "010-3513-7552", img: images.phone },
-      { name: "Gmail", title: "volumefd@gmail.com", img: images.gmail },
+      {
+        name: "LinkedIn",
+        title: "LinkedIn",
+        img: images.linkedin,
+        link: "https://www.linkedin.com/in/nuyhs/",
+      },
+      {
+        name: "Gmail",
+        title: "volumefd@gmail.com",
+        img: images.gmail,
+        link: "mailto:volumefd@gmail.com",
+      },
       {
         name: "Github",
         title: "Github",
