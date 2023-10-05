@@ -7,6 +7,7 @@ import icebear from "./icebear.png";
 import stackclone from "./stackoverflow.png";
 import zustand from "./zustand.png";
 import ribbon from "./ribbon.svg";
+import linkedin from "./linkedin.svg";
 
 const images = {
   bbangorder,
@@ -18,6 +19,7 @@ const images = {
   stackclone,
   zustand,
   ribbon,
+  linkedin,
 };
 
 export default images;
