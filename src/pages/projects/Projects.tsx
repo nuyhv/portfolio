@@ -32,6 +32,14 @@ const CustomSlider = styled(Slider)`
   .slick-next::before {
     color: #485276;
   }
+  .slick-dots {
+    bottom: -15px;
+    li {
+      button::before {
+        color: #485276;
+      }
+    }
+  }
 `;
 
 const Projects = () => {
