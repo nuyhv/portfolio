@@ -58,11 +58,11 @@ const Projects = () => {
         <ContentWrapper key={project.id} data-aos="fade-up">
           <h1>Projects</h1>
           <CustomSlider {...settings}>
-            <ImgContainer>
-              <img src={project.image} alt={project.title} />
-            </ImgContainer>
-            <div>2</div>
-            <div>3</div>
+            {project.image.map((image) => (
+              <ImgContainer key={image}>
+                <img src={image} alt={project.title} />
+              </ImgContainer>
+            ))}
           </CustomSlider>
           <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
           <div>
