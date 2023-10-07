@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import images from "../images/images";
 
 export const ContentWrapper = styled.section`
+  width: 100%;
   min-height: 36rem;
   padding: 3rem;
   border-radius: 2rem;

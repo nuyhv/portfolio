@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 const MainpageWrapper = styled.main`
   display: flex;
   justify-content: center;
-  column-gap: 2rem;
+  gap: 2rem;
   padding: 0 1rem 0 1rem;
   height: 100%;
   width: 100%;
