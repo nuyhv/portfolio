@@ -182,13 +182,25 @@ export const skillsScripts = [
   },
 ];
 
+export const aboutScripts = [
+  {
+    id: 1,
+    title: ["안녕하세요.", "웹 프론트엔드 개발자 송상현입니다."],
+    desc: [
+      "코드를 개선하는 것을 주저하지 않고 바로 실행에 옮깁니다.",
+      "사용자 경험을 높이기 위해서 의견을 주고받는 것을 좋아합니다.",
+      "문제를 해결하기 위해 포기하지 않고 집요하게 파고듭니다.",
+    ],
+  },
+];
+
 export const projectScripts: Project[] = [
   {
     id: 1,
     title: "빵 오더",
     period: "2023.08.24 ~ 2023.09.22",
     skills: ["React", "Javacript", "Tailwind CSS", "Styled-Components", "Zustand"],
-    image: [images.bbangorder],
+    image: [images.bbangorder, images.bbangorder2, images.bbangorder3],
     routePath: "/bbangorder",
     demoLink: "http://bbangorder.s3-website.ap-northeast-2.amazonaws.com/",
     repoLink: "https://github.com/codestates-seb/seb45_main_014",
@@ -201,7 +213,7 @@ export const projectScripts: Project[] = [
     title: "Stack Overflow 클론",
     period: "2023.08.04 ~ 2023.08.23",
     skills: ["React", "JavaScript", "Styled-Components", "Redux-toolkit"],
-    image: [images.stackclone],
+    image: [images.stackclone, images.stackclone2],
     routePath: "/stackoverflow",
     demoLink: "",
     repoLink: "",
