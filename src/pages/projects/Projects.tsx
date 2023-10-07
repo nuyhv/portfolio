@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 const ImgContainer = styled.div`
   width: 100%;
   /* min-height: fit-content; */
-  max-height: 60%;
+  max-height: 350px;
   overflow: hidden;
   border-radius: 1rem;
   img {
