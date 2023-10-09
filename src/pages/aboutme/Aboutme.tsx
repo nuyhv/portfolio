@@ -30,7 +30,7 @@ const Contents = styled.div`
   .highlight {
     font-weight: 700;
     background-clip: inherit;
-    background: linear-gradient(to right, #95e0f1, #465878);
+    background: linear-gradient(to right, #8894b3, #3c4f6f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -50,8 +50,8 @@ const Aboutme = () => {
               <span className="highlight">주저하지 않고</span> 바로 실행에 옮깁니다.
             </li>
             <li>
-              <span className="highlight">사용자 경험</span>을 높이기 위해서 의견을 주고받는 것을
-              좋아합니다.
+              <span className="highlight">사용자 경험</span>을 높이기 위해서 의견을 주고받고
+              반영하는 것을 좋아합니다.
             </li>
             <li>
               문제를 해결하기 위해 포기하지 않고 <span className="highlight">집요하게</span>{" "}
