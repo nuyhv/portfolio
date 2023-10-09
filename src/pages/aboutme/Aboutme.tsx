@@ -4,6 +4,9 @@ import { styled } from "styled-components";
 
 const Introduce = styled.ul`
   padding-top: 1rem;
+  li {
+    padding-bottom: 1rem;
+  }
 `;
 
 const Profile = styled.div`
@@ -27,7 +30,7 @@ const Contents = styled.div`
   .highlight {
     font-weight: 700;
     background-clip: inherit;
-    background: linear-gradient(to right, #eee, #333);
+    background: linear-gradient(to right, #95e0f1, #465878);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -42,9 +45,18 @@ const Aboutme = () => {
         <div>
           <h2>{aboutScripts.title}</h2>
           <Introduce>
-            {aboutScripts.desc.map((desc) => (
-              <li className="pb-4 highlight">{desc}</li>
-            ))}
+            <li>
+              코드를 <span className="highlight">개선</span>하는 것을{" "}
+              <span className="highlight">주저하지 않고</span> 바로 실행에 옮깁니다.
+            </li>
+            <li>
+              <span className="highlight">사용자 경험</span>을 높이기 위해서 의견을 주고받는 것을
+              좋아합니다.
+            </li>
+            <li>
+              문제를 해결하기 위해 포기하지 않고 <span className="highlight">집요하게</span>{" "}
+              파고듭니다.
+            </li>
           </Introduce>
         </div>
       </Contents>
