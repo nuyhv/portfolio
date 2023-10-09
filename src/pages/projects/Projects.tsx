@@ -44,7 +44,7 @@ const CustomSlider = styled(Slider)`
 
 const NoImage = styled.div`
   width: 100%;
-  height: 70%;
+  height: 400px;
   background-color: #d6d8df;
   border-radius: 1rem;
 `;
