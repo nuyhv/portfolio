@@ -26,8 +26,8 @@ const Contents = styled.div`
   }
   .highlight {
     font-weight: 700;
-    background-clip: border-box;
-    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: inherit;
+    background: linear-gradient(to right, #eee, #333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -43,7 +43,7 @@ const Aboutme = () => {
           <h2>{aboutScripts.title}</h2>
           <Introduce>
             {aboutScripts.desc.map((desc) => (
-              <li className="pb-4">{desc}</li>
+              <li className="pb-4 highlight">{desc}</li>
             ))}
           </Introduce>
         </div>
