@@ -204,7 +204,12 @@ export const projectScripts: Project[] = [
     repoLink: "https://github.com/codestates-seb/seb45_main_014",
     subTitle:
       "빵 오더는 빵집을 검색하거나, 추천 빵집으로 접속해서 메뉴를 고르고 예약된 시간에 맞춰서 픽업하는 서비스입니다.",
-    desc: [],
+    desc: [
+      "사용자가 검색어(매장, 지역, 메뉴명)를 입력하여 빵집을 검색할 수 있도록 구현하였습니다.",
+      "유효하지 않는 검색어(공백, 검색어 사이에 지나치게 많은 공백)를 검색 불가능하게 예외 처리하였습니다.",
+      "Local Storage를 이용한 최근 검색어 기능을 구현하였습니다.",
+      "장바구니 페이지의 전반적인 레이아웃과 수량 변경, 물품 삭제, 주문 기능을 구현하였습니다.",
+    ],
   },
   {
     id: 2,
@@ -216,7 +221,11 @@ export const projectScripts: Project[] = [
     demoLink: "http://stackoverflowpratice.s3-website-us-east-1.amazonaws.com/",
     repoLink: "https://github.com/codestates-seb/seb45_pre_008",
     subTitle: "Stack Overflow의 질문 페이지를 클론 코딩했습니다.",
-    desc: [],
+    desc: [
+      "제목, 내용으로 게시글을 검색할 수 있도록 구현하였습니다.",
+      "헤더, 푸터, 사이드바 등 페이지의 레이아웃과 디자인 구성을 주도하였습니다.",
+      "중복된 코드를 방지하고자 컴포넌트를 공동화하고 이미지를 모듈화하여 작업하였습니다.",
+    ],
   },
   {
     id: 3,
