@@ -85,7 +85,7 @@ const Projects = () => {
               ))}
             </CustomSlider>
           )}
-          <div className="flex items-center">
+          <div className="flex items-center gap-2">
             <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
             <Icon>
               <a href={project.demoLink}>
