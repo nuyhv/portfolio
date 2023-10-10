@@ -88,12 +88,12 @@ const Projects = () => {
           <div className="flex items-center gap-2">
             <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
             <Icon>
-              <a href={project.demoLink}>
+              <a href={project.demoLink} target="_blank" rel="noreferrer">
                 <img src={images.link} width="30" />
               </a>
             </Icon>
             <Icon>
-              <a href={project.repoLink}>
+              <a href={project.repoLink} target="_blank" rel="noreferrer">
                 <img src={images.github} width="25" />
               </a>
             </Icon>
