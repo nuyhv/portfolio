@@ -103,12 +103,16 @@ const Projects = () => {
               <Tag key={skills}>{skills}</Tag>
             ))}
           </div>
-          <p className="font-semibold text-lg">{project.subTitle}</p>
-          <ul>
-            {project.desc.map((desc) => (
-              <li className="list-disc relative left-4">{desc}</li>
-            ))}
-          </ul>
+          <div>
+            <p className="font-semibold text-lg pb-1.5">{project.subTitle}</p>
+            <ul className="flex flex-col gap-1.5">
+              {project.desc.map((desc) => (
+                <li className="list-disc relative left-4">
+                  <p>{desc}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </ContentWrapper>
       ))}
     </section>
