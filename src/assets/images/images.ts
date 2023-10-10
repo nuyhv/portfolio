@@ -11,6 +11,7 @@ import stackclone2 from "./stackoverflow2.png";
 import zustand from "./zustand.png";
 import ribbon from "./ribbon.svg";
 import linkedin from "./linkedin.svg";
+import link from "./link.svg";
 
 const images = {
   bbangorder,
@@ -26,6 +27,7 @@ const images = {
   zustand,
   ribbon,
   linkedin,
+  link,
 };
 
 export default images;
