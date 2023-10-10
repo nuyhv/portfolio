@@ -85,8 +85,8 @@ const Projects = () => {
               ))}
             </CustomSlider>
           )}
-          <div className="flex items-center gap-2">
-            <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
+          <div className="flex items-center gap-2 pt-2">
+            <h2 className="text-2xl font-semibold">{project.title}</h2>
             <Icon>
               <a href={project.demoLink} target="_blank" rel="noreferrer">
                 <img src={images.link} width="30" />
@@ -98,7 +98,7 @@ const Projects = () => {
               </a>
             </Icon>
           </div>
-          <div>
+          <div className="flex flex-wrap gap-2 py-2">
             {project.skills.map((skills) => (
               <Tag key={skills}>{skills}</Tag>
             ))}
