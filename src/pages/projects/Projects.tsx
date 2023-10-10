@@ -75,7 +75,9 @@ const Projects = () => {
               ))}
             </CustomSlider>
           )}
-          <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
+          <div className="flex">
+            <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
+          </div>
           <div>
             {project.skills.map((skills) => (
               <Tag key={skills}>{skills}</Tag>
