@@ -104,9 +104,9 @@ const Projects = () => {
             ))}
           </div>
           <p className="font-semibold text-lg">{project.subTitle}</p>
-          <ul className="list-disc">
+          <ul>
             {project.desc.map((desc) => (
-              <li className="relative left-4">{desc}</li>
+              <li className="list-disc relative left-4">{desc}</li>
             ))}
           </ul>
         </ContentWrapper>
