@@ -24,9 +24,8 @@ export const ContentWrapper = styled.section`
 
 export const Tag = styled.span`
   display: inline-block;
+  min-width: max-content;
   padding: 0.2rem 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
   border-radius: 1.5rem;
   border: 2px solid #485276;
   color: #485276;
