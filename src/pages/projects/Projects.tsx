@@ -4,6 +4,7 @@ import { projectScripts } from "../../scripts/projects/preview.ts";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import images from "../../assets/images/images.ts";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -49,6 +50,15 @@ const NoImage = styled.div`
   border-radius: 1rem;
 `;
 
+const Icon = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 30px;
+  a {
+    align-items: center;
+  }
+`;
+
 const Projects = () => {
   const settings = {
     dots: true,
@@ -75,8 +85,18 @@ const Projects = () => {
               ))}
             </CustomSlider>
           )}
-          <div className="flex">
+          <div className="flex items-center">
             <h2 className="text-2xl font-semibold py-2">{project.title}</h2>
+            <Icon>
+              <a href={project.demoLink}>
+                <img src={images.link} width="30" />
+              </a>
+            </Icon>
+            <Icon>
+              <a href={project.repoLink}>
+                <img src={images.github} width="25" />
+              </a>
+            </Icon>
           </div>
           <div>
             {project.skills.map((skills) => (
