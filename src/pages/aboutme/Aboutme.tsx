@@ -2,8 +2,10 @@ import { ContentWrapper } from "../../assets/styles/CommonStyles.tsx";
 import { aboutScripts } from "../../scripts/projects/preview.ts";
 import { styled } from "styled-components";
 
-const Introduce = styled.ul`
-  padding-top: 1rem;
+const Introduce = styled.div`
+  ul {
+    padding-top: 1rem;
+  }
   li {
     padding-bottom: 1rem;
   }
@@ -34,6 +36,9 @@ const Contents = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  @media screen and (max-width: 1250px) {
+    flex-direction: column;
+  }
 `;
 
 const Aboutme = () => {
@@ -41,10 +46,10 @@ const Aboutme = () => {
     <ContentWrapper id="aboutme">
       <h1>About me</h1>
       <Contents>
-        <Profile>dd</Profile>
-        <div>
+        <Profile>프로필 사진 들어갈 곳</Profile>
+        <Introduce>
           <h2>{aboutScripts.title}</h2>
-          <Introduce>
+          <ul>
             <li>
               코드를 <span className="highlight">개선</span>하는 것을{" "}
               <span className="highlight">주저하지 않고</span> 바로 실행에 옮깁니다.
@@ -57,8 +62,8 @@ const Aboutme = () => {
               문제를 해결하기 위해 포기하지 않고 <span className="highlight">집요하게</span>{" "}
               파고듭니다.
             </li>
-          </Introduce>
-        </div>
+          </ul>
+        </Introduce>
       </Contents>
     </ContentWrapper>
   );
