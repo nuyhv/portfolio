@@ -13,7 +13,7 @@ export const ContentWrapper = styled.section`
     position: relative;
     left: -48px;
     padding-left: 48px;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     background-image: url(${images.ribbon});
     background-repeat: no-repeat;
     background-size: 18rem;
