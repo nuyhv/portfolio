@@ -22,6 +22,10 @@ const SkillCard = styled.div`
     object-fit: cover;
     border-radius: 25%;
   }
+  @media screen and (max-width: 390px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const SkillName = styled.span`
