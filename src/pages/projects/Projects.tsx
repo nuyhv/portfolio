@@ -71,8 +71,8 @@ const Description = styled.ul`
     display: flex;
   }
   li::before {
-    content: "✔️";
-    margin-right: 8px;
+    content: "✓";
+    margin-right: 7px;
   }
 `;
 
