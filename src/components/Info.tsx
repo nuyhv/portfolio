@@ -2,7 +2,11 @@ import * as React from "react";
 import { styled } from "styled-components";
 import { infoScripts } from "../scripts/projects/preview";
 
-const InfoWrapper = styled.div`
+interface InfoWrapperProps {
+  open: boolean; // open 프로퍼티를 정의
+}
+
+const InfoWrapper = styled.div<InfoWrapperProps>`
   min-width: 19rem;
   height: calc(100vh - 80.3px * 2);
   border-radius: 1.5rem;
@@ -13,17 +17,14 @@ const InfoWrapper = styled.div`
   color: white;
   @media screen and (max-width: 1250px) {
     z-index: 100;
-    height: max-content;
     position: fixed;
     top: 50%;
     left: 0;
-    transform: translate3d(-97%, -50%, 0);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    transition: 0.5s all ease-out;
-    &.active {
-      transform: translate3d(0, -50%, 0);
-    }
+    transition: all 0.5s ease-out;
+    transform: ${(props) =>
+      props.open ? "translate3d(0, -50%, 0)" : "translate3d(-100%, -50%, 0)"};
   }
 `;
 
@@ -52,10 +53,10 @@ const Contactlist = styled.ul`
   margin-top: 2.5rem;
   gap: 1.5rem;
   font-family: "Open Sans", sans-serif;
-  @media screen and (max-width: 1250px) {
+  /* @media screen and (max-width: 1250px) {
     align-items: center;
     gap: 1rem;
-  }
+  } */
 `;
 
 const Contact = styled.li`
@@ -63,16 +64,16 @@ const Contact = styled.li`
   flex-direction: column;
   gap: 1.5rem;
   font-family: "Open Sans", sans-serif;
-  @media screen and (max-width: 1250px) {
+  /* @media screen and (max-width: 1250px) {
     flex-direction: row;
-  }
+  } */
 `;
 
 const Title = styled.span`
   padding-left: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  @media screen and (max-width: 1250px) {
+  /* @media screen and (max-width: 1250px) {
     display: none;
     font-size: 0.8rem;
     font-weight: 600;
@@ -80,7 +81,7 @@ const Title = styled.span`
     border-radius: 0.5rem;
     color: white;
     padding: 0.2rem 0.5rem;
-  }
+  } */
 `;
 
 const ContactItem = styled.div`
@@ -90,7 +91,7 @@ const ContactItem = styled.div`
   &:hover {
     scale: 1.05;
   }
-  @media screen and (max-width: 1250px) {
+  /* @media screen and (max-width: 1250px) {
     flex-direction: column;
     transition: none;
     align-items: center;
@@ -113,23 +114,27 @@ const ContactItem = styled.div`
       border-color: transparent transparent black transparent;
       transform: translateX(-50%);
     }
-  }
+  } */
 `;
 
 const SideButton = styled.div`
-  z-index: -1;
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: calc(100% + 0.8rem);
-  height: 8rem;
-  background-color: white;
-  border-radius: 1.2rem;
-  border: 7px solid #3a4466;
-  transition: 0.3s all ease;
-  &:hover {
-    scale: 1.02;
+  display: none;
+  @media screen and (max-width: 1250px) {
+    display: block;
+    z-index: -1;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% + 0.8rem);
+    height: 8rem;
+    background-color: white;
+    border-radius: 1.2rem;
+    border: 7px solid #3a4466;
+    transition: 0.3s all ease;
+    &:hover {
+      scale: 1.02;
+    }
   }
 `;
 
@@ -157,23 +162,13 @@ const Avatar = styled.div`
 const Info: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const handleOutsideClick = (event: MouseEvent) => {
-    // InfoWrapper 바깥 영역을 클릭하면 isOpen을 false로 변경
-    const target = event.target as Element;
-    if (!target.closest(".InfoWrapper")) {
-      setIsOpen(false);
-    }
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+    console.log(`현재 상태는 ${isOpen}`);
   };
 
-  React.useEffect(() => {
-    window.addEventListener("click", handleOutsideClick);
-    return () => {
-      window.removeEventListener("click", handleOutsideClick);
-    };
-  }, []);
-
   return (
-    <InfoWrapper className={isOpen ? "active InfoWrapper" : "InfoWrapper"}>
+    <InfoWrapper open={isOpen}>
       <InfoCard>
         {infoScripts.map((info) => (
           <InfoSection>
@@ -220,7 +215,7 @@ const Info: React.FC = () => {
           </InfoSection>
         ))}
       </InfoCard>
-      <SideButton onClick={() => setIsOpen(!isOpen)} />
+      <SideButton onClick={toggleMenu} />
     </InfoWrapper>
   );
 };
