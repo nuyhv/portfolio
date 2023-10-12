@@ -1,3 +1,4 @@
+import * as React from "react";
 import { styled } from "styled-components";
 import { infoScripts } from "../scripts/projects/preview";
 
@@ -16,11 +17,11 @@ const InfoWrapper = styled.div`
     position: fixed;
     top: 50%;
     left: 0;
-    transform: translate3d(-95%, -50%, 0);
+    transform: translate3d(-100%, -50%, 0);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    transition: 0.5s all ease;
-    &:hover {
+    transition: 0.5s all ease-out;
+    &.active {
       transform: translate3d(0, -50%, 0);
     }
   }
@@ -149,8 +150,10 @@ const Avatar = styled.div`
 `;
 
 const Info: React.FC = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
-    <InfoWrapper>
+    <InfoWrapper className={isOpen ? "active" : ""}>
       <InfoCard>
         {infoScripts.map((info) => (
           <InfoSection>
@@ -197,7 +200,7 @@ const Info: React.FC = () => {
           </InfoSection>
         ))}
       </InfoCard>
-      <SideButton />
+      <SideButton onClick={() => setIsOpen(!isOpen)} />
     </InfoWrapper>
   );
 };
