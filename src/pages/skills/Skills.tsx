@@ -22,7 +22,11 @@ const SkillCard = styled.div`
     object-fit: cover;
     border-radius: 25%;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 425px) {
+    width: 60px;
+    height: 60px;
+  }
+  @media screen and (max-width: 375px) {
     width: 55px;
     height: 55px;
   }
