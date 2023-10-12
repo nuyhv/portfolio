@@ -12,7 +12,7 @@ const Introduce = styled.div`
 `;
 
 const Profile = styled.div`
-  min-width: 250px;
+  /* min-width: 100%; */
   max-width: 500px;
   height: 300px;
   border-radius: 1rem;
@@ -36,7 +36,7 @@ const Contents = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  @media screen and (max-width: 1250px) {
+  @media screen and (max-width: 765px) {
     flex-direction: column;
   }
 `;
