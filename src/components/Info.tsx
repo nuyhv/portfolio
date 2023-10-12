@@ -1,6 +1,7 @@
 import * as React from "react";
 import { styled } from "styled-components";
 import { infoScripts } from "../scripts/projects/preview";
+import images from "../assets/images/images";
 
 interface InfoWrapperProps {
   open: boolean; // open 프로퍼티를 정의
@@ -16,8 +17,8 @@ const InfoWrapper = styled.div<InfoWrapperProps>`
   background-color: #3a4466;
   color: white;
   @media screen and (max-width: 1250px) {
-    z-index: 100;
     position: fixed;
+    z-index: 100;
     top: 50%;
     left: 0;
     border-top-left-radius: 0;
@@ -120,17 +121,20 @@ const ContactItem = styled.div`
 const SideButton = styled.div`
   display: none;
   @media screen and (max-width: 1250px) {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     z-index: -1;
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 10%;
+    right: -2.8rem;
     transform: translateY(-50%);
-    width: calc(100% + 0.8rem);
-    height: 8rem;
+    width: 4rem;
+    height: 3.2rem;
     background-color: white;
     border-radius: 1.2rem;
-    border: 7px solid #3a4466;
+    border: 6px solid #3a4466;
     transition: 0.3s all ease;
     &:hover {
       scale: 1.02;
@@ -215,7 +219,9 @@ const Info: React.FC = () => {
           </InfoSection>
         ))}
       </InfoCard>
-      <SideButton onClick={toggleMenu} />
+      <SideButton onClick={toggleMenu}>
+        <img src={images.heart} width="40" alt="Heart" />
+      </SideButton>
     </InfoWrapper>
   );
 };
