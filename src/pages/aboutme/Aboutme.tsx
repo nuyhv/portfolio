@@ -79,6 +79,10 @@ const Aboutme = () => {
               문제를 해결하기 위해 포기하지 않고 <span className="highlight">집요하게</span>{" "}
               파고듭니다.
             </li>
+            <li>
+              서로의 <span className="highlight">경험을 공유</span>하는 것을 좋아하여,{" "}
+              <span className="highlight">개발자를 위한 개발자</span>가 되는것이 목표입니다.
+            </li>
           </ul>
         </Introduce>
       </Contents>
