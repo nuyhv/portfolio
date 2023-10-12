@@ -176,6 +176,24 @@ const Copyright = styled.div`
 
 const Info: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const infoWrapperRef = React.useRef<HTMLDivElement | null>(null);
+
+  // Infowrapper 외부 클릭 시 닫기
+  const handleClickOutside = (event: MouseEvent) => {
+    if (infoWrapperRef.current && !infoWrapperRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    // Infowrapper 외부 클릭 이벤트를 추가
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
@@ -183,7 +201,7 @@ const Info: React.FC = () => {
   };
 
   return (
-    <InfoWrapper open={isOpen}>
+    <InfoWrapper ref={infoWrapperRef} open={isOpen}>
       <InfoCard>
         {infoScripts.map((info) => (
           <InfoSection>
