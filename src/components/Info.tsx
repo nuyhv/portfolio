@@ -8,8 +8,12 @@ interface InfoWrapperProps {
 }
 
 const InfoWrapper = styled.div<InfoWrapperProps>`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 19rem;
   height: calc(100vh - 80.3px * 2);
+  min-height: 530px;
   border-radius: 1.5rem;
   box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -163,6 +167,13 @@ const Avatar = styled.div`
   overflow: hidden;
 `;
 
+const Copyright = styled.div`
+  position: relative;
+  bottom: 0;
+  font-size: 0.8rem;
+  padding: 0 0 1rem 1rem;
+`;
+
 const Info: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -222,6 +233,9 @@ const Info: React.FC = () => {
       <SideButton onClick={toggleMenu}>
         <img src={images.heart} width="40" alt="Heart" />
       </SideButton>
+      <Copyright>
+        <p>©️ 2023 Developed by nuyhv</p>
+      </Copyright>
     </InfoWrapper>
   );
 };
