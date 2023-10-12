@@ -57,6 +57,10 @@ const Icon = styled.div`
   a {
     align-items: center;
   }
+  transition: 0.3s all ease;
+  &:hover {
+    scale: 1.1;
+  }
 `;
 
 const Projects = () => {
