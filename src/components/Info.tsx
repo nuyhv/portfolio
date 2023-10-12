@@ -10,7 +10,7 @@ const InfoWrapper = styled.div`
   top: 80.3px;
   background-color: #3a4466;
   color: white;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1250px) {
     width: 100vw;
     height: 100%;
     position: relative;
@@ -24,7 +24,7 @@ const InfoCard = styled.div`
   border-radius: 1.5rem;
   padding: 3rem 1.6rem;
   background-color: #485276;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1250px) {
     border-radius: 0;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ const InfoCard = styled.div`
 `;
 
 const InfoSection = styled.section`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1250px) {
     /* display: flex; */
     /* justify-content: space-between; */
   }
@@ -46,7 +46,7 @@ const Contactlist = styled.ul`
   margin-top: 2.5rem;
   gap: 1.5rem;
   font-family: "Open Sans", sans-serif;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1250px) {
     align-items: center;
     gap: 1rem;
   }
@@ -57,7 +57,7 @@ const Contact = styled.li`
   flex-direction: column;
   gap: 1.5rem;
   font-family: "Open Sans", sans-serif;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1250px) {
     flex-direction: row;
   }
 `;
@@ -66,7 +66,7 @@ const Title = styled.span`
   padding-left: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1250px) {
     display: none;
     font-size: 0.8rem;
     font-weight: 600;
@@ -84,7 +84,7 @@ const ContactItem = styled.div`
   &:hover {
     scale: 1.05;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1250px) {
     flex-direction: column;
     transition: none;
     align-items: center;
