@@ -13,6 +13,7 @@ import ribbon from "./ribbon.svg";
 import linkedin from "./linkedin.svg";
 import link from "./link.svg";
 import heart from "./heart.svg";
+import profile from "./profile.png";
 
 const images = {
   bbangorder,
@@ -30,6 +31,7 @@ const images = {
   linkedin,
   link,
   heart,
+  profile,
 };
 
 export default images;
