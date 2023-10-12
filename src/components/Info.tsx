@@ -17,7 +17,7 @@ const InfoWrapper = styled.div`
     position: fixed;
     top: 50%;
     left: 0;
-    transform: translate3d(-100%, -50%, 0);
+    transform: translate3d(-97%, -50%, 0);
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     transition: 0.5s all ease-out;
@@ -124,8 +124,13 @@ const SideButton = styled.div`
   transform: translateY(-50%);
   width: calc(100% + 0.8rem);
   height: 8rem;
-  background-color: #3a4466;
+  background-color: white;
   border-radius: 1.2rem;
+  border: 7px solid #3a4466;
+  transition: 0.3s all ease;
+  &:hover {
+    scale: 1.02;
+  }
 `;
 
 interface IconProps {
@@ -152,8 +157,23 @@ const Avatar = styled.div`
 const Info: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
+  const handleOutsideClick = (event: MouseEvent) => {
+    // InfoWrapper 바깥 영역을 클릭하면 isOpen을 false로 변경
+    const target = event.target as Element;
+    if (!target.closest(".InfoWrapper")) {
+      setIsOpen(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("click", handleOutsideClick);
+    return () => {
+      window.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
   return (
-    <InfoWrapper className={isOpen ? "active" : ""}>
+    <InfoWrapper className={isOpen ? "active InfoWrapper" : "InfoWrapper"}>
       <InfoCard>
         {infoScripts.map((info) => (
           <InfoSection>
