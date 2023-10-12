@@ -23,8 +23,8 @@ const SkillCard = styled.div`
     border-radius: 25%;
   }
   @media screen and (max-width: 390px) {
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
   }
 `;
 
