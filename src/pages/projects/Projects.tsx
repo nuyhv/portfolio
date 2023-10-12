@@ -63,6 +63,19 @@ const Icon = styled.div`
   }
 `;
 
+const Description = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  li {
+    display: flex;
+  }
+  li::before {
+    content: "✔️";
+    margin-right: 8px;
+  }
+`;
+
 const Projects = () => {
   const settings = {
     dots: true,
@@ -109,13 +122,13 @@ const Projects = () => {
           </div>
           <div>
             <p className="font-semibold text-lg pb-1.5">{project.subTitle}</p>
-            <ul className="flex flex-col gap-1.5">
+            <Description>
               {project.desc.map((desc) => (
-                <li className="list-disc relative left-4">
+                <li className="relative">
                   <p>{desc}</p>
                 </li>
               ))}
-            </ul>
+            </Description>
           </div>
         </ContentWrapper>
       ))}
