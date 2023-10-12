@@ -1,3 +1,4 @@
+import images from "../../assets/images/images.ts";
 import { ContentWrapper } from "../../assets/styles/CommonStyles.tsx";
 import { aboutScripts } from "../../scripts/projects/preview.ts";
 import { styled } from "styled-components";
@@ -12,12 +13,22 @@ const Introduce = styled.div`
 `;
 
 const Profile = styled.div`
-  /* min-width: 100%; */
-  max-width: 500px;
+  flex-shrink: 0;
+  width: 250px;
   height: 300px;
   border-radius: 1rem;
   background-color: gray;
   overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 765px) {
+    flex: auto;
+    max-width: 100%;
+    height: 250px;
+  }
 `;
 
 const Contents = styled.div`
@@ -46,7 +57,9 @@ const Aboutme = () => {
     <ContentWrapper id="aboutme">
       <h1>About me</h1>
       <Contents>
-        <Profile>프로필 사진 들어갈 곳</Profile>
+        <Profile>
+          <img src={images.profile} alt="Profile" />
+        </Profile>
         <Introduce>
           <h2>{aboutScripts.title}</h2>
           <ul>
