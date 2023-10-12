@@ -122,10 +122,10 @@ const SideButton = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: calc(100% + 0.7rem);
+  width: calc(100% + 0.8rem);
   height: 8rem;
   background-color: #3a4466;
-  border-radius: 0.7rem;
+  border-radius: 1.2rem;
 `;
 
 interface IconProps {
