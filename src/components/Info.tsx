@@ -11,12 +11,18 @@ const InfoWrapper = styled.div`
   background-color: #3a4466;
   color: white;
   @media screen and (max-width: 1250px) {
-    width: 100vw;
-    height: 100%;
-    position: relative;
-    bottom: 0;
-    top: 0;
-    border-radius: 0;
+    z-index: 100;
+    height: max-content;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translate3d(-95%, -50%, 0);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: 0.5s all ease;
+    &:hover {
+      transform: translate3d(0, -50%, 0);
+    }
   }
 `;
 
@@ -25,11 +31,10 @@ const InfoCard = styled.div`
   padding: 3rem 1.6rem;
   background-color: #485276;
   @media screen and (max-width: 1250px) {
-    border-radius: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem 1rem;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 `;
 
@@ -110,6 +115,18 @@ const ContactItem = styled.div`
   }
 `;
 
+const SideButton = styled.div`
+  z-index: -1;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% + 0.7rem);
+  height: 8rem;
+  background-color: #3a4466;
+  border-radius: 0.7rem;
+`;
+
 interface IconProps {
   bgcolor?: string;
 }
@@ -180,6 +197,7 @@ const Info: React.FC = () => {
           </InfoSection>
         ))}
       </InfoCard>
+      <SideButton />
     </InfoWrapper>
   );
 };
