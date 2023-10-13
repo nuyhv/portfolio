@@ -63,7 +63,7 @@ const Aboutme = () => {
         <Introduce>
           <div className="font-notosans text-[22px] font-medium">
             {aboutScripts.title.map((title) => (
-              <p>{title}</p>
+              <p key={title}>{title}</p>
             ))}
           </div>
           <ul>
