@@ -61,11 +61,11 @@ const Aboutme = () => {
           <img src={images.profile} alt="Profile" />
         </Profile>
         <Introduce>
-          <h2>
+          <p className="font-notosans text-[22px] font-medium">
             {aboutScripts.title.map((title) => (
               <p>{title}</p>
             ))}
-          </h2>
+          </p>
           <ul>
             <li>
               코드를 <span className="highlight">개선</span>하는 것을{" "}

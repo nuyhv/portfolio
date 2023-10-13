@@ -169,6 +169,7 @@ const Copyright = styled.div`
   bottom: 0;
   font-size: 0.8rem;
   padding: 0 0 1rem 1rem;
+  font-family: "Open Sans", sans-serif;
 `;
 
 const Info: React.FC = () => {
@@ -213,8 +214,8 @@ const Info: React.FC = () => {
                 />
               </Avatar>
               <div>
-                <h1 className="mb-1">{info.name}</h1>
-                <p>{info.dev}</p>
+                <p className="mb-1 text-2xl font-medium">{info.name}</p>
+                <p className="font-opensans">{info.dev}</p>
               </div>
             </div>
             <Contactlist>
