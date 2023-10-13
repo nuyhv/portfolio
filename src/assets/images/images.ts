@@ -12,7 +12,6 @@ import zustand from "./zustand.png";
 import ribbon from "./ribbon.svg";
 import linkedin from "./linkedin.svg";
 import link from "./link.svg";
-import heart from "./heart.svg";
 import profile from "./profile.png";
 import contacts from "./contacts.svg";
 
@@ -31,7 +30,6 @@ const images = {
   ribbon,
   linkedin,
   link,
-  heart,
   profile,
   contacts,
 };
