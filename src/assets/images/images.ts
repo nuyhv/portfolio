@@ -14,6 +14,7 @@ import linkedin from "./linkedin.svg";
 import link from "./link.svg";
 import heart from "./heart.svg";
 import profile from "./profile.png";
+import contacts from "./contacts.svg";
 
 const images = {
   bbangorder,
@@ -32,6 +33,7 @@ const images = {
   link,
   heart,
   profile,
+  contacts,
 };
 
 export default images;
