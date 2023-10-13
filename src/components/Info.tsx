@@ -37,8 +37,6 @@ const InfoCard = styled.div`
   padding: 3rem 1.6rem;
   background-color: #485276;
   @media screen and (max-width: 1250px) {
-    /* display: flex; */
-    /* justify-content: space-between; */
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
