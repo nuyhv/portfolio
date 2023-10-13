@@ -222,13 +222,13 @@ const Info: React.FC = () => {
               <p className="text-xl font-semibold">Contact</p>
               <Contact>
                 {info.contact.map((contact) => (
-                  <a
-                    href={contact.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex gap-2 items-center"
-                  >
-                    <ContactItem>
+                  <ContactItem>
+                    <a
+                      href={contact.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex gap-2 items-center"
+                    >
                       <Icon bgcolor={contact.bgcolor}>
                         <img
                           src={contact.img}
@@ -238,8 +238,8 @@ const Info: React.FC = () => {
                         />
                       </Icon>
                       <Title>{contact.title}</Title>
-                    </ContactItem>
-                  </a>
+                    </a>
+                  </ContactItem>
                 ))}
               </Contact>
             </Contactlist>
