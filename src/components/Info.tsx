@@ -168,7 +168,7 @@ const Copyright = styled.div`
   position: relative;
   bottom: 0;
   font-size: 0.8rem;
-  padding: 0 0 1rem 1rem;
+  padding: 0 0 1rem 1.6rem;
   font-family: "Open Sans", sans-serif;
 `;
 
