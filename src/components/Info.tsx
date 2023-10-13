@@ -252,7 +252,7 @@ const Info: React.FC = () => {
         <img src={images.heart} width="40" alt="Heart" />
       </SideButton>
       <Copyright>
-        <p>©️ 2023 Developed by nuyhv</p>
+        <p>© 2023 Developed by nuyhv</p>
       </Copyright>
     </InfoWrapper>
   );
