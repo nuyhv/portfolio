@@ -43,7 +43,7 @@ const Contents = styled.div`
   .highlight {
     font-weight: 700;
     background-clip: inherit;
-    background: linear-gradient(to right, #8894b3, #3c4f6f);
+    background: linear-gradient(45deg, #3c4f6f, #5e90cd, #3c4f6f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
