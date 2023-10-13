@@ -56,13 +56,13 @@ export const skillsScripts = [
     skills: [
       {
         id: 1,
-        name: "React",
+        name: "React.js",
         img: "https://img.icons8.com/color/144/react-native.png",
         bgcolor: "#61dafb",
       },
       {
         id: 2,
-        name: "JavaScript",
+        name: "Javascript",
         img: "https://img.icons8.com/color/144/javascript--v1.png",
         bgcolor: "#f0db4f",
       },
@@ -74,19 +74,19 @@ export const skillsScripts = [
       },
       {
         id: 4,
-        name: "HTML",
+        name: "HTML5",
         img: "https://img.icons8.com/color/144/html-5.png",
         bgcolor: "#e34f26",
       },
       {
         id: 5,
-        name: "CSS",
+        name: "CSS3",
         img: "https://img.icons8.com/color/144/css3.png",
         bgcolor: "#2965f1",
       },
       {
         id: 6,
-        name: "Tailwind",
+        name: "Tailwind CSS",
         img: "https://img.icons8.com/color/144/tailwind_css.png",
         bgcolor: "#06b6d4",
       },
@@ -127,7 +127,7 @@ export const skillsScripts = [
       },
       {
         id: 2,
-        name: "Express",
+        name: "Express.js",
         img: "https://img.icons8.com/color/144/express-js.png",
         bgcolor: "#000000",
       },
