@@ -227,7 +227,7 @@ const Info: React.FC = () => {
                       href={contact.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex gap-2 items-center"
+                      className="flex items-center"
                     >
                       <Icon bgcolor={contact.bgcolor}>
                         <img
