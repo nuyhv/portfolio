@@ -22,14 +22,13 @@ const InfoWrapper = styled.div<InfoWrapperProps>`
   color: white;
   @media screen and (max-width: 1250px) {
     position: fixed;
-    z-index: 100;
-    top: 50%;
+    top: 80.3px;
     left: 0;
+    z-index: 100;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     transition: all 0.5s ease-out;
-    transform: ${(props) =>
-      props.open ? "translate3d(0, -50%, 0)" : "translate3d(-100%, -50%, 0)"};
+    transform: ${(props) => (props.open ? "translateX(0)" : "translateX(-100%)")};
   }
 `;
 
