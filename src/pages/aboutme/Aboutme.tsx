@@ -33,7 +33,7 @@ const Profile = styled.div`
 
 const Contents = styled.div`
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.5;
   gap: 1.5rem;
   h2 {
@@ -61,11 +61,11 @@ const Aboutme = () => {
           <img src={images.profile} alt="Profile" />
         </Profile>
         <Introduce>
-          <p className="font-notosans text-[22px] font-medium">
+          <div className="font-notosans text-[22px] font-medium">
             {aboutScripts.title.map((title) => (
               <p>{title}</p>
             ))}
-          </p>
+          </div>
           <ul>
             <li>
               코드를 <span className="highlight">개선</span>하는 것을{" "}
