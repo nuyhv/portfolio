@@ -202,7 +202,7 @@ const Info: React.FC = () => {
     <InfoWrapper ref={infoWrapperRef} open={isOpen}>
       <InfoCard>
         {infoScripts.map((info) => (
-          <InfoSection>
+          <InfoSection key={info.name}>
             <div className="flex gap-4">
               <Avatar>
                 <img
@@ -222,7 +222,7 @@ const Info: React.FC = () => {
               <p className="text-xl font-semibold">Contact</p>
               <Contact>
                 {info.contact.map((contact) => (
-                  <ContactItem>
+                  <ContactItem key={contact.name}>
                     <a
                       href={contact.link}
                       target="_blank"
