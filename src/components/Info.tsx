@@ -44,13 +44,6 @@ const InfoCard = styled.div`
   }
 `;
 
-const InfoSection = styled.section`
-  @media screen and (max-width: 1250px) {
-    /* display: flex; */
-    /* justify-content: space-between; */
-  }
-`;
-
 const Contactlist = styled.ul`
   display: flex;
   flex-direction: column;
@@ -204,7 +197,7 @@ const Info: React.FC = () => {
     <InfoWrapper ref={infoWrapperRef} open={isOpen}>
       <InfoCard>
         {infoScripts.map((info) => (
-          <InfoSection key={info.name}>
+          <section key={info.name}>
             <div className="flex gap-4">
               <Avatar>
                 <img
@@ -245,7 +238,7 @@ const Info: React.FC = () => {
                 ))}
               </Contact>
             </Contactlist>
-          </InfoSection>
+          </section>
         ))}
       </InfoCard>
       <SideButton onClick={toggleMenu}>
