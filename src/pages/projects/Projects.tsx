@@ -97,7 +97,7 @@ const Projects = () => {
             <CustomSlider {...settings}>
               {project.image.map((image) => (
                 <ImgContainer key={image}>
-                  <img src={image} alt={project.title} />
+                  <img src={image} alt={project.title} key={image} />
                 </ImgContainer>
               ))}
             </CustomSlider>
@@ -124,7 +124,7 @@ const Projects = () => {
             <p className="font-semibold text-lg pb-1.5">{project.subTitle}</p>
             <Description>
               {project.desc.map((desc) => (
-                <li className="relative">
+                <li className="relative" key={desc}>
                   <p>{desc}</p>
                 </li>
               ))}
