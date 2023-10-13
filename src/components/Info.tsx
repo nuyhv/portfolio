@@ -247,7 +247,7 @@ const Info: React.FC = () => {
         ))}
       </InfoCard>
       <SideButton onClick={toggleMenu}>
-        <img src={images.heart} width="40" alt="Heart" />
+        <img src={images.contacts} width="40" alt="Contacts" className="relative -left-0.5" />
       </SideButton>
       <Copyright>
         <p>© 2023 Developed by nuyhv</p>
