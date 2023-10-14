@@ -61,7 +61,7 @@ const Aboutme = () => {
           <img src={images.profile} alt="Profile" />
         </Profile>
         <Introduce>
-          <div className="font-notosans text-[22px] font-medium">
+          <div className="text-[22px] font-medium">
             {aboutScripts.title.map((title) => (
               <p key={title}>{title}</p>
             ))}

@@ -103,7 +103,7 @@ const Projects = () => {
             </CustomSlider>
           )}
           <div className="flex items-center gap-2 pt-2">
-            <h2 className="font-notosans text-2xl font-semibold">{project.title}</h2>
+            <h2 className="text-2xl font-semibold">{project.title}</h2>
             <Icon>
               <a href={project.demoLink} target="_blank" rel="noreferrer">
                 <img src={images.link} width="30" />

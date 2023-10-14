@@ -210,7 +210,7 @@ const Info: React.FC = () => {
               </Avatar>
               <div>
                 <p className="mb-1 text-2xl font-medium">{info.name}</p>
-                <p className="font-opensans">{info.dev}</p>
+                <p>{info.dev}</p>
               </div>
             </div>
             <Contactlist>
