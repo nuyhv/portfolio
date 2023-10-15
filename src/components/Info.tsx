@@ -69,7 +69,7 @@ const Contact = styled.li`
 const Title = styled.span`
   padding-left: 0.5rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   /* @media screen and (max-width: 1250px) {
     display: none;
     font-size: 0.8rem;
@@ -214,7 +214,7 @@ const Info: React.FC = () => {
               </div>
             </div>
             <Contactlist>
-              <p className="text-xl font-semibold">Contact</p>
+              <p className="text-xl font-medium">Contact</p>
               <Contact>
                 {info.contact.map((contact) => (
                   <ContactItem key={contact.name}>
