@@ -14,6 +14,7 @@ import linkedin from "./linkedin.svg";
 import link from "./link.svg";
 import profile from "./profile.png";
 import contacts from "./contacts.svg";
+import magnifier from "./magnifier.svg";
 
 const images = {
   bbangorder,
@@ -32,6 +33,7 @@ const images = {
   link,
   profile,
   contacts,
+  magnifier,
 };
 
 export default images;
