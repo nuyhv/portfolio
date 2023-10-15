@@ -103,7 +103,7 @@ const Projects = () => {
             </CustomSlider>
           )}
           <div className="flex items-center gap-2 pt-2">
-            <h2 className="text-2xl font-semibold">{project.title}</h2>
+            <h2 className="text-2xl font-medium">{project.title}</h2>
             <Icon>
               <a href={project.demoLink} target="_blank" rel="noreferrer">
                 <img src={images.link} width="30" />
@@ -121,7 +121,7 @@ const Projects = () => {
             ))}
           </div>
           <div>
-            <p className="font-semibold text-lg pb-1.5">{project.subTitle}</p>
+            <p className="font-medium text-lg pb-1.5">{project.subTitle}</p>
             <Description>
               {project.desc.map((desc) => (
                 <li className="relative" key={desc}>
