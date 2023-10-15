@@ -11,6 +11,7 @@ export const ContentWrapper = styled.section`
   overflow: hidden;
   h1 {
     position: relative;
+    font-weight: 500;
     left: -48px;
     padding-left: 48px;
     margin-bottom: 2.5rem;
@@ -30,5 +31,5 @@ export const Tag = styled.span`
   border: 2px solid #485276;
   color: #485276;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
 `;
