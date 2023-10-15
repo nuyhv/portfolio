@@ -36,12 +36,8 @@ const Contents = styled.div`
   font-size: 1.15rem;
   line-height: 1.5;
   gap: 1.5rem;
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
   .highlight {
-    font-weight: 700;
+    font-weight: 600;
     background-clip: inherit;
     background: linear-gradient(45deg, #3c4f6f, #5e90cd, #3c4f6f);
     -webkit-background-clip: text;
@@ -61,7 +57,7 @@ const Aboutme = () => {
           <img src={images.profile} alt="Profile" />
         </Profile>
         <Introduce>
-          <div className="text-[22px] font-medium">
+          <div className="text-[1.4rem] font-medium">
             {aboutScripts.title.map((title) => (
               <p key={title}>{title}</p>
             ))}
