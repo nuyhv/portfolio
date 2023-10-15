@@ -49,7 +49,6 @@ const Contactlist = styled.ul`
   flex-direction: column;
   margin-top: 2.5rem;
   gap: 1.5rem;
-  font-family: "Open Sans", sans-serif;
   /* @media screen and (max-width: 1250px) {
     align-items: center;
     gap: 1rem;
@@ -60,7 +59,6 @@ const Contact = styled.li`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  font-family: "Open Sans", sans-serif;
   /* @media screen and (max-width: 1250px) {
     flex-direction: row;
   } */
@@ -164,7 +162,6 @@ const Copyright = styled.div`
   bottom: 0;
   font-size: 0.8rem;
   padding: 0 0 1rem 1.6rem;
-  font-family: "Open Sans", sans-serif;
 `;
 
 const Info: React.FC = () => {
