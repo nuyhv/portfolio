@@ -47,6 +47,7 @@ const MenuItem = styled.li`
     display: block;
     font-size: 0.9rem;
     padding: 0.9rem;
+    font-weight: 500;
     text-decoration: none;
     color: inherit;
     @media screen and (max-width: 375px) {
