@@ -67,6 +67,7 @@ const Icon = styled.div`
 const Description = styled.ul`
   display: flex;
   flex-direction: column;
+  padding-bottom: 0.7rem;
   gap: 0.375rem;
   li {
     display: flex;
@@ -130,8 +131,8 @@ const Projects = () => {
                 </li>
               ))}
             </Description>
+            <DetailButton />
           </div>
-          <DetailButton />
         </ContentWrapper>
       ))}
     </section>
