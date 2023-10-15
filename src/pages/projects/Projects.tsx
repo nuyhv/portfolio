@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import images from "../../assets/images/images.ts";
+import { DetailButton } from "../../components/DetailButton.tsx";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -130,6 +131,7 @@ const Projects = () => {
               ))}
             </Description>
           </div>
+          <DetailButton />
         </ContentWrapper>
       ))}
     </section>
