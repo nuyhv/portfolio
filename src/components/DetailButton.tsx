@@ -9,7 +9,8 @@ const Button = styled.div`
   border-radius: 1.5rem;
   background-color: #485276;
   color: white;
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.7rem;
+  padding-right: 1rem;
   font-size: 0.9rem;
   cursor: pointer;
 `;
