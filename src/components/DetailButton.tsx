@@ -13,6 +13,9 @@ const Button = styled.div`
   padding-right: 1rem;
   font-size: 0.9rem;
   cursor: pointer;
+  &:hover {
+    background-color: #6d779c;
+  }
 `;
 
 export const DetailButton = () => {
