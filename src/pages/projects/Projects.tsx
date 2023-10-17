@@ -1,3 +1,4 @@
+import * as React from "react";
 import { ContentWrapper, Tag } from "../../assets/styles/CommonStyles.tsx";
 import styled from "styled-components";
 import { projectScripts } from "../../scripts/projects/preview.ts";
@@ -76,8 +77,11 @@ const Description = styled.ul`
     margin-right: 7px;
   }
 `;
+type ProjectProps = {
+  openModal: () => void;
+};
 
-const Projects = () => {
+const Projects: React.FC<ProjectProps> = ({ openModal }) => {
   const settings = {
     dots: true,
     infinite: false,
@@ -87,6 +91,7 @@ const Projects = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <section id="projects" className="flex flex-col gap-8">
       {projectScripts.map((project) => (
@@ -130,7 +135,9 @@ const Projects = () => {
                 </li>
               ))}
             </Description>
-            <DetailButton />
+            <button onClick={openModal}>
+              <DetailButton />
+            </button>
           </div>
         </ContentWrapper>
       ))}
