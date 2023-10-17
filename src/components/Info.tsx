@@ -147,7 +147,7 @@ const Icon = styled.div<IconProps>`
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: ${(props) => props.bgcolor || "white"};
+  background-color: ${(props) => props.color || "white"};
 `;
 
 const Avatar = styled.div`
@@ -221,7 +221,7 @@ const Info: React.FC = () => {
                       rel="noreferrer"
                       className="flex items-center"
                     >
-                      <Icon bgcolor={contact.bgcolor}>
+                      <Icon color={contact.color}>
                         <img
                           src={contact.img}
                           alt={contact.name}
