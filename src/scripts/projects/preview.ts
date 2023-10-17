@@ -260,3 +260,16 @@ export const projectScripts: Project[] = [
     ],
   },
 ];
+
+export const expScripts = [
+  {
+    id: 1,
+    title: "CodeStates",
+    subtitle: "CodeStates SE Frontend Bootcamp",
+    period: "2023.04 ~ 2023.10",
+    desc: [
+      "JavaScript, React.js 기반 객체지향 프로그래밍 학습",
+      "팀 프로젝트 총 2회 진행(Pre, Main project)",
+    ],
+  },
+];
