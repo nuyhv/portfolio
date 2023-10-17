@@ -179,6 +179,12 @@ export const skillsScripts = [
         img: "https://img.icons8.com/color/144/figma.png",
         bgcolor: "#f24e1e",
       },
+      {
+        id: 7,
+        name: "Postman",
+        img: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png",
+        bgcolor: "#f24e1e",
+      },
     ],
   },
 ];
