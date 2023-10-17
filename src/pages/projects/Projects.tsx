@@ -54,10 +54,9 @@ const NoImage = styled.div`
 const Icon = styled.div`
   display: flex;
   justify-content: center;
+  border-radius: 50%;
+  min-width: 30px;
   width: 30px;
-  a {
-    align-items: center;
-  }
   transition: 0.3s all ease;
   &:hover {
     scale: 1.1;
@@ -113,7 +112,7 @@ const Projects = () => {
             </Icon>
             <Icon>
               <a href={project.repoLink} target="_blank" rel="noreferrer">
-                <img src={images.github} width="25" />
+                <img src={images.github} width="30" />
               </a>
             </Icon>
           </div>
