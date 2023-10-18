@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 
 type DetailProps = {
   onClose: () => void;
+  route: string;
 };
 
 const DetailModal = styled(Modal)`
@@ -19,13 +20,13 @@ const ModalWrapper = styled.div`
 
 const Description = styled.section``;
 
-export const Detail: React.FC<DetailProps> = ({ onClose }) => {
+export const Detail: React.FC<DetailProps> = ({ onClose, route }) => {
   return (
     <ModalWrapper>
       <ModalOverlay onClick={onClose} />
       <DetailModal>
         <CloseButton onClick={onClose}>×</CloseButton>
-        <Description>내용</Description>
+        <Description>{`현재 ${route}의 내용을 담고 있음`}</Description>
       </DetailModal>
     </ModalWrapper>
   );

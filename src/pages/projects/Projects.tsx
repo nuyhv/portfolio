@@ -89,12 +89,14 @@ const Projects = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+  const [curRoute, setCurRoute] = React.useState("");
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const closeModal = () => {
     setIsModalOpen(false);
     document.body.style.overflow = "unset";
   };
-  const openModal = () => {
+  const openModal = (routePath: string) => {
+    setCurRoute(routePath);
     setIsModalOpen(true);
     document.body.style.overflow = "hidden";
   };
@@ -142,13 +144,13 @@ const Projects = () => {
                 </li>
               ))}
             </Description>
-            <button onClick={openModal}>
+            <button onClick={() => openModal(project.routePath)}>
               <DetailButton />
             </button>
           </div>
         </ContentWrapper>
       ))}
-      {isModalOpen ? <Detail onClose={closeModal} /> : null}
+      {isModalOpen ? <Detail route={curRoute} onClose={closeModal} /> : null}
     </section>
   );
 };
