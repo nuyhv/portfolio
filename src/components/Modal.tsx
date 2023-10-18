@@ -22,11 +22,14 @@ export const Modal = styled.div`
 
 export const CloseButton = styled.button`
   position: absolute;
-  top: 0px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  line-height: 1.5rem;
   cursor: pointer;
 `;
 
