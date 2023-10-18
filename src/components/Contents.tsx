@@ -17,15 +17,12 @@ const Wrapper = styled.div`
   }
 `;
 
-type ContentsProps = {
-  openModal: () => void;
-};
-const Contents: React.FC<ContentsProps> = ({ openModal }) => {
+const Contents = () => {
   return (
     <Wrapper>
       <Aboutme />
       <Skills />
-      <Projects openModal={openModal} />
+      <Projects />
       <Experience />
     </Wrapper>
   );

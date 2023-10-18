@@ -1,8 +1,6 @@
-import * as React from "react";
 import Info from "../components/Info";
 import Contents from "../components/Contents";
 import { styled } from "styled-components";
-import { Detail } from "./projects/Detail";
 
 const MainpageWrapper = styled.main`
   display: flex;
@@ -18,20 +16,10 @@ const MainpageWrapper = styled.main`
 `;
 
 const Mainpage = () => {
-  const [isModalOpen, setIsModalOpen] = React.useState(false);
-  const closeModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = "unset";
-  };
-  const openModal = () => {
-    setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
-  };
   return (
     <MainpageWrapper>
       <Info />
-      <Contents openModal={openModal} />
-      {isModalOpen ? <Detail onClose={closeModal} /> : null}
+      <Contents />
     </MainpageWrapper>
   );
 };

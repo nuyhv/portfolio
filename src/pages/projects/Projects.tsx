@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import images from "../../assets/images/images.ts";
 import { DetailButton } from "../../components/DetailButton.tsx";
+import { Detail } from "./Detail.tsx";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -77,11 +78,8 @@ const Description = styled.ul`
     margin-right: 7px;
   }
 `;
-type ProjectProps = {
-  openModal: () => void;
-};
 
-const Projects: React.FC<ProjectProps> = ({ openModal }) => {
+const Projects = () => {
   const settings = {
     dots: true,
     infinite: false,
@@ -90,6 +88,15 @@ const Projects: React.FC<ProjectProps> = ({ openModal }) => {
     autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = "unset";
+  };
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = "hidden";
   };
 
   return (
@@ -141,6 +148,7 @@ const Projects: React.FC<ProjectProps> = ({ openModal }) => {
           </div>
         </ContentWrapper>
       ))}
+      {isModalOpen ? <Detail onClose={closeModal} /> : null}
     </section>
   );
 };
