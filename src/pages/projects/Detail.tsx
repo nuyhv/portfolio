@@ -1,8 +1,8 @@
 import { Modal, ModalOverlay, CloseButton } from "../../components/Modal";
 import { styled } from "styled-components";
-import { bbangorderDevText } from "../../scripts/projects/bbangorder";
-import { myportfolioDevText } from "../../scripts/projects/myportfolio";
-import { stackoverflowDevText } from "../../scripts/projects/stackoverflow";
+import { bbangorder } from "../../scripts/projects/bbangorder";
+import { myportfolio } from "../../scripts/projects/myportfolio";
+import { stackoverflow } from "../../scripts/projects/stackoverflow";
 
 type DetailProps = {
   onClose: () => void;
@@ -44,14 +44,14 @@ const Description = styled.section`
 `;
 
 export const Detail: React.FC<DetailProps> = ({ onClose, route }) => {
-  let projectData = null;
+  let detail = null;
 
   if (route === "/bbangorder") {
-    projectData = bbangorderDevText;
+    detail = bbangorder;
   } else if (route === "/stackoverflow") {
-    projectData = stackoverflowDevText;
+    detail = stackoverflow;
   } else if (route === "/myportfolio") {
-    projectData = myportfolioDevText;
+    detail = myportfolio;
   }
 
   return (
@@ -61,11 +61,11 @@ export const Detail: React.FC<DetailProps> = ({ onClose, route }) => {
         <CloseButton onClick={onClose}>×</CloseButton>
         <Description>
           {`현재 ${route}의 내용을 담고 있음`}
-          {projectData && (
+          {detail && (
             <>
               <h2>개발 내용</h2>
               <div className="flex flex-col gap-4">
-                {projectData.map((dev) => (
+                {detail.devText.map((dev) => (
                   <div key={dev.id}>
                     <h3>{dev.title}</h3>
                     <ul className="flex flex-col gap-2">
