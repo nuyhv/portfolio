@@ -64,7 +64,7 @@ const MenuItem = styled.li`
 `;
 
 const Header: React.FC = () => {
-  const [activeSection, setActiveSection] = React.useState<string | null>(null);
+  const [activeSection, setActiveSection] = React.useState<string | null>("aboutme");
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
