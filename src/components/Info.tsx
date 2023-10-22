@@ -17,8 +17,7 @@ const InfoWrapper = styled.div<InfoWrapperProps>`
   border-radius: 1.5rem;
   box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
   position: sticky;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 80.3px;
   background-color: #3a4466;
   color: white;
   @media screen and (max-width: 1250px) {
