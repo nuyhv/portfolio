@@ -82,9 +82,11 @@ const Title = styled.span`
 const ContactItem = styled.div`
   display: flex;
   align-items: center;
-  transition: all 0.3s ease;
-  &:hover {
-    scale: 1.05;
+  a {
+    transition: all 0.3s ease;
+    &:hover {
+      scale: 1.05;
+    }
   }
   /* @media screen and (max-width: 1250px) {
     flex-direction: column;
