@@ -1,5 +1,4 @@
 import { styled } from "styled-components";
-import images from "../assets/images/images";
 import MagnifierSVG from "../assets/images/magnifier.svg?react";
 
 const Button = styled.div`
