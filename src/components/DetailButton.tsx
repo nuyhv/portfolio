@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import images from "../assets/images/images";
+import MagnifierSVG from "../assets/images/magnifier.svg?react";
 
 const Button = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ const Button = styled.div`
 export const DetailButton = () => {
   return (
     <Button>
-      <img src={images.magnifier} alt="More Button" width="20" />
+      <MagnifierSVG width={20} height={20} />
       자세히 보기
     </Button>
   );
