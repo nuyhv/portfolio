@@ -1,5 +1,5 @@
 import images from "../../assets/images/images.ts";
-import { ContentWrapper } from "../../assets/styles/CommonStyles.tsx";
+import { ContentWrapper } from "../../assets/styles/commonStyles.ts";
 import { aboutScripts } from "../../scripts/projects/preview.ts";
 import { styled } from "styled-components";
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ContentWrapper, Tag } from "../../assets/styles/CommonStyles.tsx";
+import { ContentWrapper, Tag } from "../../assets/styles/commonStyles.ts";
 import styled from "styled-components";
 import { projectScripts } from "../../scripts/projects/preview.ts";
 import Slider from "react-slick";

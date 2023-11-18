@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import GlobalStyle from "./assets/styles/GlobalStyle.tsx";
+import GlobalStyle from "./assets/styles/globalStyle.ts";
 import App from "./App.tsx";
 import "./index.css";
 

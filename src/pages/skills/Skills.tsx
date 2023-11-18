@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ContentWrapper } from "../../assets/styles/CommonStyles.tsx";
+import { ContentWrapper } from "../../assets/styles/commonStyles.ts";
 import styled from "styled-components";
 import { skillsScripts } from "../../scripts/projects/preview.ts";
 

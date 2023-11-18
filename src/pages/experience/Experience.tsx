@@ -1,4 +1,4 @@
-import { ContentWrapper } from "../../assets/styles/CommonStyles.tsx";
+import { ContentWrapper } from "../../assets/styles/commonStyles.ts";
 import { styled } from "styled-components";
 import { expScripts } from "../../scripts/projects/preview.ts";
 
