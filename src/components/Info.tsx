@@ -222,7 +222,7 @@ const Info: React.FC = () => {
                       rel="noreferrer"
                       className="flex items-center"
                     >
-                      <Icon color={contact.color}>
+                      <Icon>
                         <img
                           src={contact.img}
                           alt={contact.name}
