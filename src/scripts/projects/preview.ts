@@ -39,14 +39,14 @@ export const infoScripts = [
         width: "40px",
         link: "https://github.com/nuyhv",
       },
-      {
-        name: "Velog",
-        title: "Blog",
-        img: images.velog,
-        color: "#485276",
-        width: "32px",
-        link: "https://velog.io/@ss_hyun",
-      },
+      // {
+      //   name: "Velog",
+      //   title: "Blog",
+      //   img: images.velog,
+      //   color: "#485276",
+      //   width: "32px",
+      //   link: "https://velog.io/@ss_hyun",
+      // },
     ],
   },
 ];
