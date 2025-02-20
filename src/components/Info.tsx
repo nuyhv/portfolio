@@ -243,7 +243,7 @@ const Info: React.FC = () => {
         <img src={images.contacts} width="40" alt="Contacts" className="relative -left-0.5" />
       </SideButton>
       <Copyright>
-        <p>© 2023 Developed by nuyhv</p>
+        <p>© {new Date().getFullYear()} Developed by nuyhv</p>
       </Copyright>
     </InfoWrapper>
   );
